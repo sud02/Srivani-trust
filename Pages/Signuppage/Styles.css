@@ -1,0 +1,121 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-image: url('/images/tirumala_background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    text-align: left;
+    color: #a3000e;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+.header h3 {
+    font-size: 2em;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1px; /* Adjust the font size as needed */
+}
+
+.signup-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup-box-content {
+    flex: 2;
+    padding-left: 0px;
+}
+
+.signup-box form {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.signup-box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #a3000e;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    color: #333;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.signup-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.signup-buttons button {
+    color: white;
+    background-color: #a3000e;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.signup-buttons button:hover {
+    opacity: 0.8;
+}
+
+    

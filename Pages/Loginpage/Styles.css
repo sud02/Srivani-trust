@@ -1,0 +1,141 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-image: url('/images/tirumala_background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    text-align: left;
+    color: #a3000e;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+.header h3 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+.login-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+.login-box-content {
+    flex: 2;
+    padding-left: 0px;
+}
+.login-box form {
+    flex: 2;
+    padding-left: 20px;
+} 
+.login-box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #a3000e;
+    text-align: center;
+}
+.user-box {
+    margin-bottom: 10px;
+}
+.user-box label {
+    display: block;
+    color: #333;
+}
+.user-box input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+.sign-up-link {
+    margin-left: 130px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.buttons button {
+    color: white;
+    background-color: #a3000e;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 5px; 
+}
+
+.buttons button:hover {
+    opacity: 0.8;
+}
+
+.captcha {
+    margin-bottom: 0;
+}
+  
+.captcha label {
+    display: block;
+    color: #333;
+}
+  
+.captcha-display {
+    font-size: 18px;
+    color: #555555;
+    width: calc(100% - 20px);
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#captcha-form {
+    width: calc(100% - 20px);
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#captcha-form::placeholder {
+    color: #777;
+}
+
