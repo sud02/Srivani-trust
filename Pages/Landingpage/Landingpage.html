@@ -4,24 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
-<title>Bhajanamandiram - Header</title>
+<title>Bhajana mandiralu</title>
 <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
 
 <div class="header">
-  <a href="/home" id="home">Bhajanamandiram</a>
-  <a href="/new-temple-construction" id="new-temple-construction">New Temple Construction</a>
-  <a href="/renovation-of-temple" id="renovation-of-temple">Renovation Of Temple</a>
+ <img src="/images/TTD-Logo.png">
+  <a href="/Pages/Landingpage/Landingpage.html" id="home">Bhajanamandiram</a>
+  <a href="/Pages/New temple/Newtemple.html" id="new-temple-construction">New Temple Construction</a>
   <a href="/users" id="users">Users</a>
   <a href="/reports" id="reports">Reports</a>
-  <a href="/agency" id="agency">Agency</a>
-  <a href="/sanctioned-applications" id="sanctioned-applications">Sanctioned Applications</a>
-  <a href="/sanctioned-reports" id="sanctioned-reports">Sanctioned Reports</a>
   <a href="/Pages/Loginpage/LoginPage.html" id="logout" class="logout-link">
     <img src="/images/logout-image.png" alt="Log Out" />
   </a>
 </div>
+<div class="header-below">
+    <h2>Bhajanamandiram</h2>
+</div>
+<div class="container my-4 border-container">
 <div class="info-section py-3">
     <div class="container">
       <div class="row">
@@ -34,7 +35,7 @@
         <div class="col-md-4">
           <div class="info-box">
             <span class="info-title">Request Date:</span>
-            <span class="info-content">31/1/2024</span>
+            <span class="info-content">1/2/2024</span>
           </div>
         </div>
         <div class="col-md-4">
@@ -48,7 +49,7 @@
     <div class="container my-4">
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="Phases">Phases *</label>
+            <label for="Phases">Phases <span style="color: red;">*</span></label>
             <select class="form-control custom-select" id="Phases">
                 <option selected disabled>Choose...</option>
                 <option value="Phase-I">Phase -I</option>
@@ -57,7 +58,7 @@
             </select>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="EE-Office">EE-Office file number *</label>
+            <label for="EE-Office">EE-Office file number <span style="color: red;">*</span></label>
             <input type="text" class="form-control" id="EE-Office" placeholder="">
           </div>
         </div>
@@ -65,8 +66,8 @@
     <div class="container my-4">
         <div class="row">
           <div class="col-md-4 mb-3">
-            <label for="District">Name of the District *</label>
-            <select class="form-control custom-select" id="District" name="District_Name" multiple>
+            <label for="District">Name of the District <span style="color: red;">*</span></label>
+            <select class="form-control custom-select" id="District" name="District_Name">
                 <option selected disabled>0 selected</option>
                       <option value="Anakapalli">Anakapalli</option>
                       <option value="Ananthapuram">Ananthapuram</option>
@@ -98,7 +99,7 @@
               </select>
           </div>
           <div class="col-md-4 mb-3">
-            <label for="AssemblyConstituency">Name of the Assembly Constituency *</label>
+            <label for="AssemblyConstituency">Name of the Assembly Constituency <span style="color: red;">*</span></label>
             <select class="form-control custom-select" id="AssemblyConstituency" name="Assembly_Name">
                 <option selected disabled>0 selected</option>
                 <option value="Peddapuram">Peddapuram</option>
@@ -448,9 +449,10 @@
                       <option value="Tuni">Tuni</option>
               </select>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="Mandal">Name of the Mandal *</label>
+         <div class="col-md-4 mb-3">
+            <label for="Mandal">Name of the Mandal <span style="color: red;">*</span></label>
             <select id="mandals" name="mandals" class="form-control custom-select">
+                <option selected disabled>Choose..</option>
                 <option value="Natnavaram">Nathnavaram</option>
                 <option value="Nakkapalli">Nakkapalli</option>
                 <option value="KKotapadu">KKotapadu</option>
@@ -477,31 +479,202 @@
                 <option value="Narsipatnam">Narsipatnam</option>
               </select>
           </div>
+         </div>
         </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Name of the Village <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Name_village" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Name of Hamlet,Colony <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Name_Hamlet" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Latitude of the location <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Latitude_location" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Longitude of the location <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Longitude_location" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Population of the Village/ Hamlet/ Colony <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Population" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Latitude of the location <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Latitude_location" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Name of individual/Temple etc., who made the request <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Name_individual" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Name of the Temple proposed to be constructed  <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Name_Templeproposed" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Email Address <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Email_Address" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Phone number <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Phone_number" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Documents of requestee  <span style="color: red;">*</span></label>
+                    <input type="file" class="form-control" id="Documents_requestee" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Extent of land available for the purpose <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Extent_land" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Details of the land made available <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Details_available" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Title of the land vests with ( Name of the individual/Govt./Temple etc.,)  <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Title_land" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Survey No.  <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="Survey_No" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Boundaries - East, South,West,North </label>
+                    <input type="text" class="form-control" id="Boundaries" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Whether acceptance given for donating the land in favour of the proposed New Temple </label>
+                    <input type="text" class="form-control" id="Whether_acceptance" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Details of financial support received from TTD  </label>
+                    <input type="text" class="form-control" id="Details_financial" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Any earlier for the said temple </label>
+                    <input type="text" class="form-control" id="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Details of other temples available in the vicinity </label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Details of temples available in the nearby villages with approximate distance </label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Details of villages covered if the proposal is accepted </label>
+                    <input type="text" class="form-control" id="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Amount in Rs. Proposed to be contribute by the locals if any</label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Contribution proposed by the locals if any - (not amount)</label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Email of the contact person </label>
+                    <input type="text" class="form-control" id="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Particulars of the contact person <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Phone number of Contact <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Recommendation of the Inspecting Officer <span style="color: red;">*</span> </label>
+                    <input type="text" class="form-control" id="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Other relevant issues, if any</label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name3">Additional Comments</label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name1">Documents for Inspecting Officer <span style="color: red;">*</span> </label>
+                    <input type="file" class="form-control" id="Documents_Inspecting" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Field_Name2">Is the Proposal in TTD guidelines <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="" placeholder="" required>
+                </div>
+        </div>
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset" id="clearButton">Clear</button>
+          </div>
+        
       </div>
+    </div>
 </div>
 
-
-
-<script>
-    // Function to close the dropdown after selecting an option
-    function closeDropdown() {
-      var districtDropdown = document.getElementById("District");
-      districtDropdown.style.display = "none";
-      setTimeout(function () {
-        districtDropdown.style.display = "block";
-      }, 1);
+  
+  <script>
+    function clearFields() {
+    var inputElements = document.getElementsByTagName("input");
+    for (var i = 0; i < inputElements.length; i++) {
+      if (inputElements[i].type === "text" || inputElements[i].type === "password") {
+        inputElements[i].value = "";
+      }
     }
-  
-    // Add an event listener to the "District" dropdown
-    document.getElementById("District").addEventListener("change", closeDropdown);
+  }
+  document.getElementById("clearButton").addEventListener("click", clearFields);
   </script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
