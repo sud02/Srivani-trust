@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
-<title>New Temple Construction</title>
+<title>Reports</title>
 <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
@@ -20,85 +20,97 @@
   </a>
 </div>
 <div class="header-below">
-    <h2>New Temple Construction</h2>
+    <h2>Reports</h2>
 </div>
 
-<div class="container my-4 border-container">
-    <div class="info-section py-3">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="info-box">
-                <span class="info-title">Request Type:</span>
-                <span class="info-content">Bhajana Mandiralu</span>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info-box">
-                <span class="info-title">Request Date:</span>
-                <span class="info-content">1/2/2024</span>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info-box">
-                <span class="info-title">State:</span>
-                <span class="info-content">Andhra Pradesh</span>
-              </div>
-            </div>
+<div class="container my-4">
+  <form>
+      <div class="form-row">
+          <div class="form-group col-md-3">
+              <label for="District">District</label>
+              <select id="District" class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="Anakapalli">Anakapalli</option>
+                      <option value="Ananthapuram">Ananthapuram</option>
+                      <option value="Annamayya">Annamayya</option>
+                      <option value="Alluri Sitaram Raju District">
+                        Alluri Sitaram Raju District
+                      </option>
+                      <option value="Bapatla">Bapatla</option>
+                      <option value="Chittoor">Chittoor</option>
+                      <option value="East Godavari">East Godavari</option>
+                      <option value="Eluru">Eluru</option>
+                      <option value="Guntur">Guntur</option>
+                      <option value="Kakinada">Kakinada</option>
+                      <option value="Konaseema">Konaseema</option>
+                      <option value="Krishna">Krishna</option>
+                      <option value="Kurnool">Kurnool</option>
+                      <option value="Parvathipuram Manyam">Parvathipuram Manyam</option>
+                      <option value="Nandyal">Nandyal</option>
+                      <option value="NTR District">NTR District</option>
+                      <option value="Palnadu">Palnadu</option>
+                      <option value="Prakasam">Prakasam</option>
+                      <option value="SPS Nellore">SPS Nellore</option>
+                      <option value="Srikakulam">Srikakulam</option>
+                      <option value="Sri Satyasai">Sri Satyasai</option>
+                      <option value="Tirupati">Tirupati</option>
+                      <option value="Vizianagaram">Vizianagaram</option>
+                      <option value="Visakhapatnam">Visakhapatnam</option>
+                      <option value="West Godavari">West Godavari</option>
+                      <option value="YSR Kadapa">YSR Kadapa</option>
+              </select>
           </div>
+          <div class="form-group col-md-3">
+              <label for="Mandal">Mandal</label>
+              <select id="Mandal" class="form-control">
+                <option selected>Choose...</option>
+                <option value="Natnavaram">Nathnavaram</option>
+                <option value="Nakkapalli">Nakkapalli</option>
+                <option value="KKotapadu">KKotapadu</option>
+                <option value="Kotauratla">Kotauratla</option>
+                <option value="Cheedikada">Cheedikada</option>
+                <option value="Anakapalli">Anakapalli</option>
+                <option value="S Rayavaram">S Rayavaram</option>
+                <option value="Yelamanchili">Yelamanchili</option>
+                <option value="Butchayyapeta">Butchayyapeta</option>
+                <option value="Atchuthapuram">Atchuthapuram</option>
+                <option value="Sabbavaram">Sabbavaram</option>
+                <option value="Makavarapalem">Makavarapalem</option>
+                <option value="Madugula">Madugula</option>
+                <option value="Paravada">Paravada</option>
+                <option value="Chodavaram">Chodavaram</option>
+                <option value="Golugonda">Golugonda</option>
+                <option value="Ravikamatham">Ravikamatham</option>
+                <option value="Rolugunta">Rolugunta</option>
+                <option value="Devarapalli">Devarapalli</option>
+                <option value="Kasimkota">Kasimkota</option>
+                <option value="Rambilli">Rambilli</option>
+                <option value="Munagapaka">Munagapaka</option>
+                <option value="Payakaraopeta">Payakaraopeta</option>
+                <option value="Narsipatnam">Narsipatnam</option>
+              </select>
+          </div>
+          <div class="form-group col-md-3">
+              <label for="Panchayat">Panchayat</label>
+              <select id="Panchayat" class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="Panchayat">Panchayat</option>
+              </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="Ward">Ward</label>
+            <select id="Ward" class="form-control">
+                <option selected>Choose...</option>
+                <option value="Panchayat">Ward</option>
+            </select>
         </div>
-        <div class="container my-4">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="Phases">Phases <span style="color: red;">*</span></label>
-                <select class="form-control custom-select" id="Phases">
-                    <option selected disabled>Choose...</option>
-                    <option value="Phase-I">Phase -I</option>
-                    <option value="Phase-II">Phase -II</option>
-                    <option value="Phase-III">Phase - III</option>
-                </select>
-              </div>
-        </div>
-        <div class="container my-4">
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label for="District">Name of the District <span style="color: red;">*</span></label>
-                <select class="form-control custom-select" id="District" name="District_Name">
-                    <option selected disabled>0 selected</option>
-                          <option value="Anakapalli">Anakapalli</option>
-                          <option value="Ananthapuram">Ananthapuram</option>
-                          <option value="Annamayya">Annamayya</option>
-                          <option value="Alluri Sitaram Raju District"> Alluri Sitaram Raju District
-                          </option>
-                          <option value="Bapatla">Bapatla</option>
-                          <option value="Chittoor">Chittoor</option>
-                          <option value="East Godavari">East Godavari</option>
-                          <option value="Eluru">Eluru</option>
-                          <option value="Guntur">Guntur</option>
-                          <option value="Kakinada">Kakinada</option>
-                          <option value="Konaseema">Konaseema</option>
-                          <option value="Krishna">Krishna</option>
-                          <option value="Kurnool">Kurnool</option>
-                          <option value="Parvathipuram Manyam">Parvathipuram Manyam</option>
-                          <option value="Nandyal">Nandyal</option>
-                          <option value="NTR District">NTR District</option>
-                          <option value="Palnadu">Palnadu</option>
-                          <option value="Prakasam">Prakasam</option>
-                          <option value="SPS Nellore">SPS Nellore</option>
-                          <option value="Srikakulam">Srikakulam</option>
-                          <option value="Sri Satyasai">Sri Satyasai</option>
-                          <option value="Tirupati">Tirupati</option>
-                          <option value="Vizianagaram">Vizianagaram</option>
-                          <option value="Visakhapatnam">Visakhapatnam</option>
-                          <option value="West Godavari">West Godavari</option>
-                          <option value="YSR Kadapa">YSR Kadapa</option>
-                  </select>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="AssemblyConstituency">Name of the Assembly Constituency <span style="color: red;">*</span></label>
-                <select class="form-control custom-select" id="AssemblyConstituency" name="Assembly_Name">
-                    <option selected disabled>0 selected</option>
-                    <option value="Peddapuram">Peddapuram</option>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-3">
+              <label for="AssemblyConstituency">Assembly Constituency</label>
+              <select id="AssemblyConstituency" class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="Peddapuram">Peddapuram</option>
                           
                           <option value="Kadapa">Kadapa</option>
                           
@@ -443,205 +455,64 @@
                           <option value="Rampachodavaram">Rampachodavaram</option>
                           
                           <option value="Tuni">Tuni</option>
-                  </select>
-              </div>
-             <div class="col-md-4 mb-3">
-                <label for="Mandal">Name of the Mandal <span style="color: red;">*</span></label>
-                <select id="mandals" name="mandals" class="form-control custom-select">
-                    <option selected disabled>Choose..</option>
-                    <option value="Natnavaram">Nathnavaram</option>
-                    <option value="Nakkapalli">Nakkapalli</option>
-                    <option value="KKotapadu">KKotapadu</option>
-                    <option value="Kotauratla">Kotauratla</option>
-                    <option value="Cheedikada">Cheedikada</option>
-                    <option value="Anakapalli">Anakapalli</option>
-                    <option value="S Rayavaram">S Rayavaram</option>
-                    <option value="Yelamanchili">Yelamanchili</option>
-                    <option value="Butchayyapeta">Butchayyapeta</option>
-                    <option value="Atchuthapuram">Atchuthapuram</option>
-                    <option value="Sabbavaram">Sabbavaram</option>
-                    <option value="Makavarapalem">Makavarapalem</option>
-                    <option value="Madugula">Madugula</option>
-                    <option value="Paravada">Paravada</option>
-                    <option value="Chodavaram">Chodavaram</option>
-                    <option value="Golugonda">Golugonda</option>
-                    <option value="Ravikamatham">Ravikamatham</option>
-                    <option value="Rolugunta">Rolugunta</option>
-                    <option value="Devarapalli">Devarapalli</option>
-                    <option value="Kasimkota">Kasimkota</option>
-                    <option value="Rambilli">Rambilli</option>
-                    <option value="Munagapaka">Munagapaka</option>
-                    <option value="Payakaraopeta">Payakaraopeta</option>
-                    <option value="Narsipatnam">Narsipatnam</option>
-                  </select>
-              </div>
-             </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Name of the Village <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Name_village" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Name of Hamlet,Colony <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Name_Hamlet" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Latitude of the location <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Latitude_location" placeholder="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Longitude of the location <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Longitude_location" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Population of the Village/ Hamlet/ Colony <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Population" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Specify if the proposed location is SC/ST/Fisherman colony <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Name of individual/Temple etc., who made the request <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Name_individual" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Name of the Temple proposed to be constructed  <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Name_Templeproposed" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Email Address <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Email_Address" placeholder="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Phone number <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Phone_number" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Documents of requestee  <span style="color: red;">*</span></label>
-                        <input type="file" class="form-control" id="Documents_requestee" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Extent of land available for the purpose <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Extent_land" placeholder="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Title of the land vests with ( Name of the individual/Govt./Temple etc.,)  <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Title_land" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Survey No.  <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="Survey_No" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Boundaries - East, South,West,North </label>
-                        <input type="text" class="form-control" id="Boundaries" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Whether acceptance given for donating the land in favour of the proposed New Temple </label>
-                        <input type="text" class="form-control" id="Whether_acceptance" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Details of financial support received from TTD </label>
-                        <input type="text" class="form-control" id="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Any earlier for the said temple  </label>
-                        <input type="text" class="form-control" id="Details_financial" placeholder="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Details of other temples available in the vicinity </label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Details of temples available in the nearby villages with approximate distance </label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Details of villages covered if the proposal is accepted </label>
-                        <input type="text" class="form-control" id="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Amount in Rs. Proposed to be contribute by the locals if any</label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Contribution proposed by the locals if any - (not amount)</label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Email of the contact person </label>
-                        <input type="text" class="form-control" id="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Particulars of the contact person <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Phone number of Contact <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name1">Recommendation of the Inspecting Officer </label>
-                        <input type="text" class="form-control" id="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name2">Other relevant issues, if any</label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Field_Name3">Additional Comments</label>
-                        <input type="text" class="form-control" id="" placeholder="" required>
-                    </div>
-                </div>
-            </div>
-            <div class="buttons">
-                <button type="submit">Submit</button>
-                <button type="reset" id="clearButton">Clear</button>
-              </div>
-            
+              </select>
           </div>
-</div>
+          <div class="form-group col-md-3">
+              <label for="Colony">Colony</label>
+              <input type="text" class="form-control" id="Colony">
+          </div>
+          <div class="form-group col-md-3">
+              <label for="Referred">Referred</label>
+              <input type="text" class="form-control" id="Referred">
+          </div>
+          <div class="form-group col-md-3">
+              <label for="Phases">Phases</label>
+              <select id="Phases" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Phase -I</option>
+                  <option>Phase -II</option>
+                  <option>Phase -III</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-3">
+              <label for="StartDate">Start Date</label>
+              <input type="date" class="form-control" id="StartDate">
+          </div>
+          <div class="form-group col-md-3">
+              <label for="EndDate">End Date</label>
+              <input type="date" class="form-control" id="EndDate">
+          </div>
+          <div class="form-group col-md-3">
+              <label for="ColonyType">Specify if the proposed location is</label>
+              <select id="ColonyType" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>SC</option>
+                  <option>ST</option>
+                  <option>BC</option>
+                  <option>Fisherman</option>
+                  <option>SC/ST/BC</option>
+                  <option>SC/ST/Fisherman</option>
+                  <option>Others</option>
+              </select>
+          </div>
+          <div class="form-group col-md-3">
+              <label for="Approvals">Approvals</label>
+              <select id="Approvals" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Sanctioned</option>
+                  <option>Rejected</option>
+              </select>
+          </div>
+      </div>
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset" id="clearButton">Clear</button>
+      </div>
+  </form>
+</div>    
+  
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/popper.min.js"></script>
