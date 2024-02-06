@@ -1,0 +1,216 @@
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Header Styles */
+.header {
+    background-color: #a3000e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+    border-bottom: 4px solid #fbcd5d;
+    position: relative; /* Adjusted for general use */
+    width: 100%;
+    margin-top: 0;
+}
+
+.header img {
+    width: 70px;
+}
+
+.header a {
+    color: #fbcd5d;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.header a:hover, .header a.active {
+    color: white;
+}
+
+.header a.active {
+    border: 2px solid white;
+    background-color: white;
+    color: #8B0000;
+}
+
+.header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header-below {
+    text-align: center;
+    padding-top: 20px;
+    color: #8B0000;
+}
+
+.header-below h2, .header h3 {
+    font-weight: 600;
+}
+
+.logout-link {
+    float: right;
+    padding: 10px 20px;
+}
+
+.logout-link img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Form and Input Styles */
+.form-control, .custom-select, .user-box input, #captcha-form, .input-group input {
+    border: 2px solid #fbcd5d;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    width: calc(100% - 20px);
+}
+
+::placeholder {
+    color: #a3000e;
+    opacity: 1;
+}
+
+.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 24px;
+}
+
+.custom-select:focus {
+    border-color: #fbcd5d;
+}
+
+.custom-select option, .dropdown-menu .btn {
+    padding: 10px;
+}
+
+.dropdown-menu .btn:hover, .dropdown-menu .btn:focus {
+    background-color: #a3000e;
+    color: white;
+}
+
+/* Button Styles */
+.buttons button, .signup-buttons button {
+    color: white;
+    background-color: #a3000e;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    width: 200px;
+}
+
+.buttons button:hover, .signup-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Additional Styles for Specific Layouts */
+.background {
+    background-image: url('/images/tirumala_background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.login-box, .signup-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.login-box-content, .signup-box-content, .login-box form, .signup-box form {
+    flex: 2;
+}
+
+.login-box h2, .signup-box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #a3000e;
+    text-align: center;
+}
+
+.user-box, .input-group, .captcha {
+    margin-bottom: 10px;
+}
+
+.user-box label, .input-group label, .captcha label {
+    display: block;
+    color: #333;
+}
+
+.sign-up-link, .captcha-display {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.captcha-display {
+    font-size: 18px;
+    color: #555555;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.border-container {
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    width: 1000px; 
+    margin: auto; /* Center the container */
+}
+
+.background {
+    background-image: url('/Static/images/tirumala_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    position: relative;
+}
+
+
