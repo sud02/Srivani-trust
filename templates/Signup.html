@@ -65,24 +65,34 @@
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            fetch("http://127.0.0.1:8000/signup", { 
-                method: "POST",
-                body: new URLSearchParams(new FormData(this)),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.id) {
-                    // Registration successful, show a success alert
-                    swal("Registration Successful", "You are now registered.", "success");
-                } else {
-                    // Registration failed, show an alert with details
-                    swal("Registration Failed", data.detail, "error");
-                }
-            })
-            .catch(error => console.error('Error:', error));
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    const formData = new FormData(this);
+    const formObject = Object.fromEntries(formData); 
+
+    fetch("http://127.0.0.1:8000/signup", { 
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json', 
+        },
+        body: JSON.stringify(formObject),
+    })
+    .then(data => {
+        // If registration is successful, show a success alert
+        swal("Success", "Registration Successful", "success")
+        .then((value) => {
+            // The URL should match the FastAPI route for your login page, not the file path in your project structure
+            window.location.href = '/LoginPage'; // Adjusted to use the route path
         });
+    })
+    .catch(error => {
+        // If there's an error, show an error alert
+        console.error('Error:', error);
+        swal("Error", "Registration Failed: " + error.message, "error");
+    });
+});
+
     </script>
+    
 </body>
 </html>

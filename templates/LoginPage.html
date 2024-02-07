@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Login Page</title>
     <link rel="stylesheet" href="/Static/style.css">
 </head>
@@ -18,92 +13,29 @@
         </div>
         <div class="login-box">
             <div class="login-box-content">
-                <form action="/login" id="loginForm" method="post">
+                <form id="loginForm" onsubmit="event.preventDefault(); Signin();">
                     <h2>Log In</h2>
                     <div class="user-box">
-                        <label for="lg_username" class="sr-only">Username</label>
-                        <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Username">
+                        <input type="text" id="Username" placeholder="Username">
                     </div>
                     <div class="user-box">
-                        <label for="lg_password" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Password">
+                        <input type="password" id="Password" placeholder="Password">
                     </div>
                     <div class="captcha">
                         <label for="captcha-input">Captcha</label>
-                        <div class="captcha-display"></div>
-                        <input type="text" id="captcha-form" placeholder="Enter captcha text">
-                    </div>
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember-me">
-                        <label for="remember-me">Remember Me!</label>
-                        <a href="/templates/Signup.html" class="sign-up-link">Sign Up!</a>
+                        <canvas id="captcha" width="200" height="50"></canvas>
+                        <input type="text" id="captcha-input" placeholder="Enter captcha text">
+                        <button id="refresh-captcha" type="button">Refresh Captcha</button>
                     </div>
                     <div class="buttons">
-                        <button type="submit">Submit</button>
-                        <button type="reset">Clear</button>
+                        <button type="button" onclick="Signin()">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-      // Generate and display captcha
-      function generateCaptcha() {
-          var captchaText = '';
-          var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-          var captchaLength = 6; // Length of the captcha
-      
-          for (var i = 0; i < captchaLength; i++) {
-              captchaText += charset.charAt(Math.floor(Math.random() * charset.length));
-          }
-      
-          document.querySelector('.captcha-display').innerText = captchaText;
-          return captchaText;
-      }
-      
-      var generatedCaptcha = generateCaptcha(); // Store generated captcha
-      
-      document.getElementById("loginForm").addEventListener("submit", function(event) {
-          event.preventDefault(); // Prevent default form submission
-      
-          var userCaptchaInput = document.getElementById("captcha-form").value;
-      
-          if (userCaptchaInput !== generatedCaptcha) {
-              alert("Captcha Incorrect. Please try again."); // Simple alert for captcha mismatch
-              generatedCaptcha = generateCaptcha(); // Regenerate captcha
-              return; // Exit function to stop form submission
-          }
-      
-          var formData = new FormData(this);
-          var object = {};
-          formData.forEach((value, key) => { object[key] = value; });
-          var json = JSON.stringify(object);
-      
-          fetch("/Pages/Loginpage/LoginPage.html", { // Assuming your login endpoint is hosted on the same server
-              method: "POST",
-              headers: {
-                  'Content-Type': 'application/json' // Ensuring we're sending JSON
-              },
-              body: json,
-          })
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Network response was not ok');
-              }
-              return response.json();
-          })
-          .then(data => {
-              alert("Login Successful"); // Simple alert for successful login
-              // Redirect user or handle login success scenario here
-          })
-          .catch(error => {
-              console.error('Error:', error);
-              alert("Login Failed. Please try again."); // Simple alert for login failure
-          });
-      });
-      </script>
-      
-      
+
+    <script src="/Static/scripts/login.js">
+    </script>
 </body>
 </html>
