@@ -22,14 +22,20 @@
                         <input type="password" id="Password" placeholder="Password">
                     </div>
                     <div class="captcha">
-                        <label for="captcha-input">Captcha</label>
-                        <canvas id="captcha" width="200" height="50"></canvas>
-                        <input type="text" id="captcha-input" placeholder="Enter captcha text">
-                        <button id="refresh-captcha" type="button">Refresh Captcha</button>
+                        <div class="captcha-container">
+                            <canvas id="captcha" width="120" height="30"></canvas>
+                            <input type="text" id="captcha-input" placeholder="Enter captcha text">
+                            <button id="refresh-captcha" type="button">Refresh Captcha</button>
+                        </div>
+                    </div>
+                    <div class="signup-link">
+                        Don't have an account? <a href="/signup">Sign up here</a>
                     </div>
                     <div class="buttons">
-                        <button type="button" onclick="Signin()">Submit</button>
+                        <button type="button" class="submit-button" onclick="Signin()">Submit</button>
+                        <button type="button" class="clear-button">Clear</button>
                     </div>
+                    
                 </form>
             </div>
         </div>

@@ -82,13 +82,46 @@ body, html {
 }
 
 /* Adjust the captcha canvas styling */
+.captcha {
+    display: flex;
+    align-items: center; /* Vertically center align items in the container */
+    justify-content: center; /* Horizontally center the container */
+    flex-direction: column; /* Stack the label and container */
+    margin-bottom: 10px; /* Add some margin to the bottom */
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the middle */
+    gap: 10px; /* Space between the canvas, input, and button */
+}
+
 .captcha canvas {
     border: 2px solid #fbcd5d;
     border-radius: 20px;
-    margin-bottom: 10px;
-    width: calc(100% - 20px);
+}
+#captcha-input {
+    border: 2px solid #fbcd5d;
+    border-radius: 20px;
+    padding: 5px 10px; 
+    outline: none;
+    font-size: 16px; 
 }
 
+#refresh-captcha {
+    padding: 5px 10px; 
+    font-size: 10px; 
+    cursor: pointer; 
+    background-color: #a3000e; 
+    color: white; 
+    border: none;
+    border-radius: 20px; 
+}
+
+/* Additional styles for focus and hover states */
+#captcha-input:focus, #refresh-captcha:hover {
+    border-color: #fbcd5d;
+}
 
 
 
@@ -137,6 +170,13 @@ body, html {
 .buttons button:hover, .signup-buttons button:hover {
     opacity: 0.8;
 }
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+}
+
 
 /* Additional Styles for Specific Layouts */
 .background {
@@ -225,5 +265,7 @@ body, html {
     height: 100vh; 
     position: relative;
 }
+
+
 
 

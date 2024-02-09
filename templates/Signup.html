@@ -78,15 +78,14 @@
         body: JSON.stringify(formObject),
     })
     .then(data => {
-        // If registration is successful, show a success alert
+        
         swal("Success", "Registration Successful", "success")
         .then((value) => {
-            // The URL should match the FastAPI route for your login page, not the file path in your project structure
-            window.location.href = '/LoginPage'; // Adjusted to use the route path
+            
+            window.location.href = '/LoginPage';
         });
     })
     .catch(error => {
-        // If there's an error, show an error alert
         console.error('Error:', error);
         swal("Error", "Registration Failed: " + error.message, "error");
     });

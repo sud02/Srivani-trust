@@ -49,10 +49,11 @@ function generateCaptcha() {
         var char = chars.charAt(Math.floor(Math.random() * chars.length));
         captchaText += char;
 
-        ctx.font = "20px Arial";
+        // Adjusted font size for smaller canvas
+        ctx.font = "16px Arial"; // Smaller font size
         ctx.fillStyle = "rgb(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ")";
         ctx.textAlign = "center";
-        ctx.fillText(char, 20 + i * 30, canvas.height / 2);
+        ctx.fillText(char, 10 + i * 20, canvas.height / 2 + 5); // Adjust positioning if necessary
     }
     sessionStorage.setItem("captchaCode", captchaText);
 }

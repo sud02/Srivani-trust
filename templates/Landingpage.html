@@ -11,11 +11,11 @@
 
 <div class="header">
  <img src="/Static/images/TTD-Logo.png">
-  <a href="/templates/Landingpage.html" id="home">Bhajanamandiram</a>
-  <a href="/templates/Newtemple.html" id="new-temple-construction">New Temple Construction</a>
-  <a href="/templates/users.html" id="users">Users</a>
-  <a href="/templates/Reports.html" id="reports">Reports</a>
-  <a href="/templates/LoginPage.html" id="logout" class="logout-link">
+  <a href="/Landingpage" id="home">Bhajanamandiram</a>
+  <a href="/Newtemple" id="new-temple-construction">New Temple Construction</a>
+  <a href="/users" id="users">Users</a>
+  <a href="/Reports" id="reports">Reports</a>
+  <a href="/" id="logout" class="logout-link">
     <img src="/Static/images/Logout-image.png" alt="Log Out" />
   </a>
 </div>
@@ -23,7 +23,8 @@
     <h2>Bhajanamandiram</h2>
 </div>
 <div class="container my-4 border-container">
-<div class="info-section py-3">
+    <form id="bhajanaMandirForm"></form>
+    <div class="info-section py-3">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -577,102 +578,81 @@
                 </div>
             </div>
         </div>
-        <div class="container my-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name1">Any earlier for the said temple </label>
-                    <input type="text" class="form-control" id="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name2">Details of other temples available in the vicinity </label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name3">Details of temples available in the nearby villages with approximate distance </label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-            </div>
-        </div>
-        <div class="container my-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name1">Details of villages covered if the proposal is accepted </label>
-                    <input type="text" class="form-control" id="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name2">Amount in Rs. Proposed to be contribute by the locals if any</label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name3">Contribution proposed by the locals if any - (not amount)</label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-            </div>
-        </div>
-        <div class="container my-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name1">Email of the contact person </label>
-                    <input type="text" class="form-control" id="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name2">Particulars of the contact person <span style="color: red;">*</span></label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name3">Phone number of Contact <span style="color: red;">*</span></label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-            </div>
-        </div>
-        <div class="container my-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name1">Recommendation of the Inspecting Officer <span style="color: red;">*</span> </label>
-                    <input type="text" class="form-control" id="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name2">Other relevant issues, if any</label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name3">Additional Comments</label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-            </div>
-        </div>
-        <div class="container my-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name1">Documents for Inspecting Officer <span style="color: red;">*</span> </label>
-                    <input type="file" class="form-control" id="Documents_Inspecting" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Field_Name2">Is the Proposal in TTD guidelines <span style="color: red;">*</span></label>
-                    <input type="text" class="form-control" id="" placeholder="" required>
-                </div>
-        </div>
+        
         <div class="buttons">
-            <button type="submit">Submit</button>
+            <button type="button" id="submit"onclick="submitForm(event)">Submit</button>
             <button type="reset" id="clearButton">Clear</button>
           </div>
-        
-      </div>
+
     </div>
+    </div>
+</form>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   
   <script>
     function clearFields() {
-    var inputElements = document.getElementsByTagName("input");
-    for (var i = 0; i < inputElements.length; i++) {
-      if (inputElements[i].type === "text" || inputElements[i].type === "password") {
-        inputElements[i].value = "";
-      }
+        var inputElements = document.getElementsByTagName("input");
+        for (var i = 0; i < inputElements.length; i++) {
+            if (inputElements[i].type === "text" || inputElements[i].type === "password") {
+                inputElements[i].value = "";
+            }
+        }
     }
-  }
-  document.getElementById("clearButton").addEventListener("click", clearFields);
-  </script>
+
+    document.getElementById("clearButton").addEventListener("click", clearFields);
+
+    async function submitForm(event) {
+    event.preventDefault(); 
+    const formData = new FormData();
+    const formFields = {
+        Phases: document.getElementById('Phases').value,
+        EE_Office: document.getElementById('EE-Office').value,
+        District: document.getElementById('District').value,
+        AssemblyConstituency: document.getElementById('AssemblyConstituency').value,
+        Mandal: document.getElementById('mandals').value,
+        Name_village: document.getElementById('Name_village').value,
+        Name_Hamlet: document.getElementById('Name_Hamlet').value,
+        Latitude_location: document.getElementById('Latitude_location').value,
+        Longitude_location: document.getElementById('Longitude_location').value,
+        Population: document.getElementById('Population').value,
+        Name_individual: document.getElementById('Name_individual').value,
+        Name_Templeproposed: document.getElementById('Name_Templeproposed').value,
+        Email_Address: document.getElementById('Email_Address').value,
+        Phone_number: document.getElementById('Phone_number').value,
+        Extent_land: document.getElementById('Extent_land').value,
+        Details_available: document.getElementById('Details_available').value,
+        Title_land: document.getElementById('Title_land').value,
+        Survey_No: document.getElementById('Survey_No').value,
+        Boundaries: document.getElementById('Boundaries').value,
+        Whether_acceptance: document.getElementById('Whether_acceptance').value,
+        Details_financial: document.getElementById('Details_financial').value
+    };
+
+    formData.append('form_data', JSON.stringify(formFields));
+    const documentsRequestee = document.getElementById('Documents_requestee').files[0];
+    if(documentsRequestee) formData.append('documents_requestee', documentsRequestee);
+
+    try {
+        const response = await fetch('/submit_bhajana_mandir_form', {
+            method: 'POST',
+            body: formData,
+        });
+        if (response.ok) {
+            alert('Form submitted successfully!');
+        } else {
+            throw new Error('Form submission failed with status: ' + response.status);
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        alert(error.message);
+    }
+}
+document.getElementById('bhajanaMandirForm').addEventListener('submit', submitForm);
+
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
