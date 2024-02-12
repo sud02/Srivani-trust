@@ -1,16 +1,29 @@
-from fastapi import FastAPI, HTTPException, Form, Request, File, UploadFile, Response
+from fastapi import FastAPI, HTTPException, Form, Request, File, UploadFile
 from pymongo import MongoClient
 from pydantic import BaseModel,ValidationError
 from fastapi.responses import HTMLResponse, RedirectResponse,JSONResponse
+from fastapi.encoders import jsonable_encoder
 from passlib.context import CryptContext
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from typing import Optional
+from typing import List
 import aiofiles
 import os
 import json
+from fastapi.middleware.cors import CORSMiddleware
+
+
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],  
+    allow_headers=["*"],
+)
 
 # MongoDB setup
 client = MongoClient("mongodb://localhost:27017/")
@@ -35,6 +48,7 @@ class UserIn(BaseModel):
     password: str
     email: str
     phone_number: str
+    role:str
 
 # Bhajana Mandir Form model
 class BhajanaMandirForm(BaseModel):
@@ -59,6 +73,13 @@ class BhajanaMandirForm(BaseModel):
     Boundaries: Optional[str] = None
     Whether_acceptance: Optional[str] = None
     Details_financial: Optional[str] = None
+
+class User(BaseModel):
+    username: str
+    email: str
+    phone: str
+    password: str
+    role: str
 
 # Hash a password
 def get_password_hash(password):
@@ -140,6 +161,24 @@ async def submit_bhajana_mandir_form(
     insert_result = bhajana_mandir_forms_collection.insert_one(form_dict)
     
     return RedirectResponse(url="/Landingpage", status_code=303)
+
+@app.get("/api/users", response_model=List[dict])
+async def get_users():
+    users = list(users_collection.find({}, {'_id': 0, 'password': 0})) 
+    return jsonable_encoder(users)
+@app.post("/api/add_user")
+async def add_user(user: User):
+    if users_collection.find_one({"username": user.username}):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail="Username already exists"
+        )
+    
+    hashed_password = pwd_context.hash(user.password)
+    user.password = hashed_password
+    
+    users_collection.insert_one(user.dict())
+    
+    return {"message": "User created successfully."}
 
 if __name__ =="__main__":
     app.run()
