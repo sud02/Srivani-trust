@@ -159,8 +159,9 @@ async def submit_bhajana_mandir_form(
         form_dict['Documents_requestee'] = documents_requestee.filename 
     
     insert_result = bhajana_mandir_forms_collection.insert_one(form_dict)
-    
+
     return RedirectResponse(url="/Landingpage", status_code=303)
+
 
 @app.get("/api/users", response_model=List[dict])
 async def get_users():
@@ -170,7 +171,7 @@ async def get_users():
 async def add_user(user: User):
     if users_collection.find_one({"username": user.username}):
         raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST, detail="Username already exists"
+            status_code= status.HTTP_400_BAD_REQUEST, detail="Username already exists"
         )
     
     hashed_password = pwd_context.hash(user.password)
@@ -179,6 +180,9 @@ async def add_user(user: User):
     users_collection.insert_one(user.dict())
     
     return {"message": "User created successfully."}
+
+
+
 
 if __name__ =="__main__":
     app.run()

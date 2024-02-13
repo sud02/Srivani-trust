@@ -24,7 +24,7 @@
 </div>
 
 <div class="container my-4">
-  <form>
+  <form onsubmit="fetchReports(event)" id="reportform">
       <div class="form-row">
           <div class="form-group col-md-3">
               <label for="District">District</label>
@@ -64,30 +64,6 @@
               <label for="Mandal">Mandal</label>
               <select id="Mandal" class="form-control">
                 <option selected>Choose...</option>
-                <option value="Natnavaram">Nathnavaram</option>
-                <option value="Nakkapalli">Nakkapalli</option>
-                <option value="KKotapadu">KKotapadu</option>
-                <option value="Kotauratla">Kotauratla</option>
-                <option value="Cheedikada">Cheedikada</option>
-                <option value="Anakapalli">Anakapalli</option>
-                <option value="S Rayavaram">S Rayavaram</option>
-                <option value="Yelamanchili">Yelamanchili</option>
-                <option value="Butchayyapeta">Butchayyapeta</option>
-                <option value="Atchuthapuram">Atchuthapuram</option>
-                <option value="Sabbavaram">Sabbavaram</option>
-                <option value="Makavarapalem">Makavarapalem</option>
-                <option value="Madugula">Madugula</option>
-                <option value="Paravada">Paravada</option>
-                <option value="Chodavaram">Chodavaram</option>
-                <option value="Golugonda">Golugonda</option>
-                <option value="Ravikamatham">Ravikamatham</option>
-                <option value="Rolugunta">Rolugunta</option>
-                <option value="Devarapalli">Devarapalli</option>
-                <option value="Kasimkota">Kasimkota</option>
-                <option value="Rambilli">Rambilli</option>
-                <option value="Munagapaka">Munagapaka</option>
-                <option value="Payakaraopeta">Payakaraopeta</option>
-                <option value="Narsipatnam">Narsipatnam</option>
               </select>
           </div>
           <div class="form-group col-md-3">
@@ -464,14 +440,22 @@
           </div>
           <div class="form-group col-md-3">
               <label for="Colony">Colony</label>
-              <input type="text" class="form-control" id="Colony">
+              <select class="form-control" id="Colony">
+                <option value="">Select Colony</option>
+                <option value="colony1">Colony 1</option>
+                <option value="colony2">Colony 2</option>
+            </select>
 
              
           </div>
           <div class="form-group col-md-3">
               <label for="Referred">Referred</label>
-              <input type="text" class="form-control" id="Referred">
+              <select class="form-control" id="Referred">
+                <option value="">Select Referred</option>
+                <option value="referred">Referred</option>
+                </select>
           </div>
+
           <div class="form-group col-md-3">
               <label for="Phases">Phases</label>
               <select id="Phases" class="form-control">
@@ -546,29 +530,10 @@
     </tbody>
   </table>
 </div>
-<script>
-    $(document).ready(function() {
-        var districtToMandals = {
-            "Anakapalli": ["Nathnavaram", "Nakkapalli", "Anakapalli"],
-            "Chittoor": ["MandalA", "MandalB", "MandalC"],
-            // Ensure you complete this object with all district-mandal mappings
-        };
-    
-        $('#District').change(function() {
-            var selectedDistrict = $(this).val();
-            console.log("Selected District: ", selectedDistrict); // Debugging line
-    
-            var mandals = districtToMandals[selectedDistrict] || [];
-            var $mandalSelect = $('#Mandal');
-            $mandalSelect.empty();
-            $mandalSelect.append($('<option>').val("").text("Choose..."));
-    
-            $.each(mandals, function(index, mandal) {
-                $mandalSelect.append($('<option>').val(mandal).text(mandal));
-            });
-        });
-    });
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+<script src="/Static/scripts/Reports.js"></script>
     
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/popper.min.js"></script>

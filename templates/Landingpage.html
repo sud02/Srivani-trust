@@ -11,18 +11,10 @@
 
     <div class="header">
         <img src="/Static/images/TTD-Logo.png">
-         {% if user_role in ["admin", "viewer"] %}
          <a href="/Landingpage" id="home">Bhajanamandiram</a>
-         {% endif %}
-         {% if user_role in ["admin", "viewer"] %}
-         <a href="/Newtemple" id="new-temple-construction">New Temple Construction</a>
-         {% endif %}
-         {% if user_role in ["admin", "editor", "agency"] %}
+        <a href="/Newtemple" id="new-temple-construction">New Temple Construction</a>
          <a href="/users" id="users">Users</a>
-         {% endif %}
-         {% if user_role in ["admin", "editor", "agency"] %}
          <a href="/Reports" id="reports">Reports</a>
-         {% endif %}
          <a href="/" id="logout" class="logout-link">
            <img src="/Static/images/Logout-image.png" alt="Log Out" />
          </a>
