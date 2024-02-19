@@ -51,32 +51,349 @@ $(document).ready(function() {
             "Tallapudi", "Gokavaram", "Nallajerla", "Kadiam", "Peravali", "Korukonda", 
             "Kovvur", "Undrajavaram", "Biccavolu", "Anaparthi", "Gopalapuram"
         ],
-        "Eluru": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Guntur": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Kakinada": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Konaseema": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Krishna": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Kurnool": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Parvathipuram Manyam": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Nandyal": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "NTR District": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Palnadu": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Prakasam": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "SPS Nellore": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Srikakulam": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Sri Satyasai": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Tirupati": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Vizianagaram": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "Visakhapatnam": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "West Godavari": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    "YSR Kadapa": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-    
-        
+        "Eluru": [
+            "Bheemadole", "Mandavalli", "Velairpadu", "Pedavegi", "Kamavarapukota", 
+            "Jangareddigudem", "Nuzividu", "Lingapalem", "Jeelugu Milli", "Mudinepalle", 
+            "TNarasapuram", "Chatrai", "Unguturu", "Kukunoor", "Musunuru", "Agiripalli", 
+            "Polavaram", "Chintalapudi", "Koyyalagudem", "DwarakaTirumala", "Pedapadu", 
+            "Kalidindi", "Denduluru", "Ganapavaram", "Buttayagudem", "Kaikaluru", "Eluru", 
+            "Nidamarru"
+        ],
+        "Guntur": [
+            "Pedakakani", "Tadepalli", "Chebrolu", "Vatticherukuru", "Prathipadu", 
+            "Kollipara", "Mangalagiri", "Tadikonda", "Guntur West", "Phirangipuram", 
+            "Thulluru", "Medikonduru", "Duggirala", "Ponnur", "Kakumanu", "Tenali", 
+            "Pedanandipadu", "Guntur East"
+        ],
+        "Kakinada": [
+            "Peddapuram", "Karapa", "Samalkota", "Sankhavaram", "Kakinada Urban", 
+            "Kotananduru", "Prathipadu", "Pedapudi", "Rowthulapudi", "Pithapuram", 
+            "Thondangi", "Kakinada Rural", "UKothapalli", "Yeleswaram", "Tallarevu", 
+            "Kajuluru", "Gollaprolu", "Jaggampeta", "Tuni", "Kirlampudi", "Gadepalli"
+        ],
+        "Konaseema": [
+            "Mamidikuduru", "Allavaram", "Mummidivaram", "Kapileswarapuram", 
+            "Ramachandrapuram", "KGanagavaram", "Amalapuram", "Razole", "Uppalaguptam", 
+            "Kothapeta", "Ambajipeta", "Sakhinetipalli", "Katrenikona", "Rayavaram", 
+            "Mandapeta", "Alamuru", "Atreyapuram", "Malikipuram", "Ravulapalem", 
+            "I Polavaram", "Ainavilli", "PGannavaram"
+        ],
+        "Krishna": [
+            "Nagayalanka", "Koduru", "Pedaparupudi", "Avanigadda", "Gudivada", 
+            "Pedana", "Pamarru", "Penamaluru", "Challapalli", "Bantumilli", 
+            "Gudlavalleru", "Unguturu", "Bapulapadu", "Pamidimukkala", "Vuyyuru", 
+            "Nandivada", "Guduru", "Ghantasala", "Movva", "Mopidevi", "Kruthivennu", 
+            "Gannavaram", "Thotlavalluru", "Kankipadu", "Machilipatnam"
+        ],
+        "Kurnool": [
+                "Gonegandla", "Mantralayam", "Nandavaram", "Veldurthy", "Peddakadubur", 
+                "Kowthalam", "CBelagal", "Tuggali", "Gudur", "Kodumur", "Maddikera East", 
+                "Halaharvi", "Devanakonda", "Holagunda", "Alur", "Kurnool Rural", "Aspari", 
+                "Orvakal", "Krishnagiri", "Chippagiri", "Adoni", "Kurnool Urban", "Pattikonda", 
+                "Kosigi", "Yemmiganur", "Kallur"
+            ],
+            "Parvathipuram Manyam": [
+                "Gummalakshmipuram", "Jiyyammavalasa", "Garugubilli", "Pachipenta", "Seethampeta", 
+                "Salur", "Kurupam", "Komarada", "Makkuva", "Parvathipuram", "Veeraghattam", 
+                "Balijipeta", "Palakonda", "Bhamini", "Seethanagaram"
+            ],
+            "Nandyal": [
+                "Nandyal", "Pamulapadu", "Srisailam", "Allagadda", "Atmakur", 
+                "Midthur", "Bethamcherla", "Gospadu", "Nandikotkur", "Pagidyala", 
+                "Koilakuntla", "Bandi Atmakur", "Owk", "Sanjamala", "Kothapalle", 
+                "Mahanandi", "Gadivemula", "Panyam", "Dornipadu", "Chagalamarri", 
+                "Peapully", "Dhone", "Banaganapalli", "Kolimigundla", "Sirvel", 
+                "Jupadu Bunglow", "Rudravaram", "Velugodu", "Uyyalawada"
+            ],
+            "NTR District": [
+                "Vilavawada", "Central Vijayawada", "West Veerullapadu", "Atlapragada", 
+                "Konduru", "Vatsavai", "Nandigama", "Penuganchiprolu", "Reddigudem", 
+                "Vijayawada East", "Tiruvuru", "Kanchikacherla", "Mylavaram", 
+                "Ibrahimpatnam", "Gampalagudem", "Vissannapeta", "Vijayawada North", 
+                "Gaddamanugu", "Konduru", "Chandarlapadu", "Jaggaiahpeta", "Vijayawada Rural"
+            ],
+            "Palnadu": [
+                "Nekarikallu", "Rompicharla", "Bellamkonda", "Gurajala", "Savalyapuram", 
+                "Chilakaluripet", "Veldurthy", "Machavaram", "Bollapalli", "Dachepalli", 
+                "Macherla", "Edlapadu", "Atchampet", "Nadendla", "Piduguralla", 
+                "Rentachintala", "Narasaraopet", "Rajupalem", "Karempudi", "Durgi", 
+                "Vinukonda", "Pedakurapadu", "Sattenapalli", "Nuzendla", "Muppalla", 
+                "Amaravathi", "Ipuru", "Krosuru"
+            ],
+            "Prakasam": [
+                "Racherla", "Cumbum", "Donakonda", "Darsi", "Ongole", "Dornala", 
+                "Konakanamitla", "Tangutur", "Ponnaluru", "Zarugumalli", "Kondapi", 
+                "Ardhaveedu", "Kurichedu", "Markapuram", "Maddipadu", "Tarlupadu", 
+                "Tripuranthakam", "Pullalacheruvu", "Chandrasekhara puram", "Santhanuthalapadu", 
+                "Mundlamuru", "Singarayakonda", "Giddalur", "Komarolu", "Marripudi", 
+                "Peddaaraveedu", "Bestavaripeta", "Yerragondapalem", "Pamur", "Pedacherlopalle", 
+                "Podili", "Naguluppalapadu", "KothapatnamThallur", "Hanumanthunipadu", "Veligandla", 
+                "Chimakurthy", "Kanigiri"
+            ],
+        "SPS Nellore": [
+            "Nellore Rural", "Lingasamudram", "Rapur", "Thotapalli Gudur", "Jaladanki", 
+            "Buchireddipalem", "Seetharamapuram", "Vinjamur", "Atmakur", "Muthukur", 
+            "Kondapuram", "Podalakur", "Marripadu", "Sydapuram", "Kandukuru", "Kaluvoya", 
+            "Varikuntapadu", "Manubolu", "Vidavalur", "Chejerla", "Voletivaripalem", 
+            "Kaligiri", "Anumasamudrampeta", "Nellore Urban", "Venkatachalam", "Allur", 
+            "Kavali", "Kodavalur", "Udayagiri", "Gudluru", "Bogole", "Dagadarthi", 
+            "Ulavapadu", "Kovur", "Duttalur", "Ananthasagaram", "Sangam", "Indukurpet" 
+        ],
+
+ "Srikakulam": [
+        "Burja", "Gara", "Ranastalam", "Meliaputti", "Hiramandalam", "Kotabommali", 
+        "Kothuru", "Nandigam", "Jalumuru", "Palasa", "Saravakota", "Ponduru", 
+        "Santhabommali", "Laveru", "Narasannapeta", "Pathapatnam", "Sarubujili", 
+        "Kanchili", "Sompeta", "Ichchapuram", "Tekkali", "Kaviti", "Etcherla", 
+        "Vajrapukotturu", "Srikakulam", "Ganguvarisigadam", "Laxminarasupeta", 
+        "Mandasa", "Amadalavalasa", "Polaki"
+    ],
+    "Sri Satyasai": [
+        "Ramagiri", "Kanaganipalli", "Agali", "Mudigubba", "Lepakshi", "Bathalapalli", 
+        "Kothacheruvu", "Nallachervu", "Hindupur", "Tadimarri", "Tanakal", "Talupula", 
+        "Dharmavaram", "Chennekothapalli", "Puttaparthi", "Bukkapatnam", "Penukonda", 
+        "Amadagur", "Parigi", "Somandepalli", "Roddam", "Rolla", "Madakasira", "Nallamada", 
+        "Gudibanda", "Kadiri", "O.D.Cheruvu", "Gorantla", "Chilamathur", "Gandlapenta", 
+        "Amarapuram", "Nambulapulakunta"
+    ],
+    "Tirupati": [
+        "Vadamalapet", "Tirupati Urban", "Ramachandrapuram", "Doravarisatram", "Yerpedu", 
+        "Venkatagiri", "Ozili", "Balayapalli", "Varadaiahpalem", "Pakala", "Srikalahasti", 
+        "Pichatur", "Puttur", "Renigunta", "Nagalapuram", "Satvavedu", "Chittamur", "Gudur", 
+        "Naidupet", "Chinnagottigallu", "Thottambedu", "Buchi Naidu", "Kandriga", 
+        "Narayanavanam", "Tirupati Rural", "Chillakur", "Vakadu", "Kumara Venkata Bhupala Puram", 
+        "Yerravaripalem", "Sullurpeta", "Pellakur", "Kota", "Dakkili", "Chandragiri", "Tada"
+    ],
+    "Vizianagaram": [
+        "Bondapalli",
+        "Gantyada",
+        "Vangara",
+        "Cheepurupalli",
+        "Mentada",
+        "Jami",
+        "Badangi",
+        "Denkada",
+        "Bhogapuram",
+        "Regidi Amadalavalasa",
+        "Rajam",
+        "Kothavalasa",
+        "Garividi",
+        "Vepada",
+        "Lakkavarapukota",
+        "Srungavarapukota",
+        "Vizianagaram",
+        "Gajapathinagaram",
+        "Gurla",
+        "Bobbili",
+        "Dattirajeru",
+        "Poosapatirega",
+        "Therlam",
+        "Nellimarla",
+        "Santhakaviti",
+        "Ramabhadrapuram",
+        "Merakamudidam"
+    ],
+
+    "Visakhapatnam": [
+        "Gajuwaka",
+        "Visakhapatnam Rural",
+        "Padmanabham",
+        "Anandapuram",
+        "Gopalapatnam",
+        "Maharanipeta",
+        "Mulagada",
+        "Seethammadhara",
+        "Pedagantyada",
+        "Pendurthi",
+        "Bheemunipatnam"
+    ],
+"West Godavari": [
+    "Tadepalligudem",
+    "Tanuku",
+    "Mogalthur",
+    "Bhimavaram",
+    "Yelamanchili",
+    "Poduru",
+    "Palacoderu",
+    "Iragavaram",
+    "Pentapadu",
+    "Veeravasaram",
+    "Penugonda",
+    "Narasapuram",
+    "Attili",
+    "Penumantra",
+    "Palacole",
+    "Akividu",
+    "Undi",
+    "Achanta",
+    "Kalla"
+],
+"YSR Kadapa": [
+    "Kadapa",
+    "Khajipeta",
+    "Gopavaram",
+    "Kalasapadu",
+    "Simhadripuram",
+    "Peddamudiam",
+    "Kondapuram",
+    "Badvel",
+    "Atlur",
+    "Veerapunayunipalle",
+    "Chennur",
+    "Sidhout",
+    "Mylavaram",
+    "Rajupalem",
+    "Sri Avadhutha Kasi Nayana (SAKN)",
+    "Brahmamgarimattam",
+    "Lingala",
+    "Proddutur",
+    "Kamalapuram",
+    "Thondur",
+    "Pendlimarry",
+    "Vallur",
+    "Jammalamadugu",
+    "Porumamilla",
+    "Vempalli",
+    "BKodur",
+    "Yerraguntla",
+    "Muddanur",
+    "S Mydukur",
+    "Chinthakommadinne",
+    "Pulivendula",
+    "Vemula",
+    "Vontimitta",
+    "Chakrayapet",
+    "Duvvur",
+    "Chapad"
+]
     };
 
     var districtToColonies = {
-        "Anakapalli": ["", "", ""],
-        "Ananthapuram": ["", "", ""],
+        "Anakapalli": [
+            "Pathavalabu",
+            "SC colony- Arjunapeta",
+            "SC Colony",
+            "Thadaparthi",
+            "Relli",
+            "ST Konda Dora Colony",
+            "Ayodhya Colony",
+            "SC Relli Colony",
+            "ST Colony"
+        ],
+        "Ananthapuram": [
+            "Budaga Jangala Colony",
+            "ST Colony",
+            "SC Colony"
+        ],
+        "Annamayya": [
+            "Ashok Nagar ST Colony",
+            "Harijanavada",
+            "Pedda Harijanawada",
+            "SC Colony",
+            "Cherlo Harijanawada",
+            "Kotala",
+            "Harijanawada",
+            "ST Colony"
+         ],
+         "Alluri Sitaram Raju District": [
+            "Chinthalagondi",
+            "Darakonda Colony",
+            "Bondru Guda",
+            "Urisingi",
+            "Pedduru",
+            "Chinna Relangi Padu",
+            "DV Kota",
+            "Duppalavada",
+            "Kakavada",
+            "Valasi",
+            "Gumma",
+            "Gatthum",
+            "Badimela",
+            "Pathakondipalli",
+            "Sc Colony",
+            "Bullojupalem",
+            "Allamputtu",
+            "Singarala Padu",
+            "Dakodu",
+            "Bangaru Budi",
+            "Chikilintha",
+            "Doramamidi",
+            "Valamuru Gondi",
+            "Ujjangi",
+            "Sunnampadu",
+            "Kosuri Vari Veedhi",
+            "Pindikonda",
+            "panasa",
+            "Madela",
+            "Kunduluru",
+            "Dirisinapalli",
+            "Godugu Mamidi"
+        ],
+
+        "Bapatla": [
+            "First ward Colony",
+            "ST Colony",
+            "Madiga Palle",
+            "Sc Colony"
+        ],
+
+        "Chittoor": [
+           "Ragi Samudram",
+           "Sc Colony",
+           "Bodhagutta Palli",
+           "SC Colony Parvathi Nagar",
+           "ST Colony",
+           "SC Colony",
+           "Vnuthalapalli"
+        ],
+        "East Godavari": [
+            "Arundhati Colony",
+            "Saradhanagar"
+        ],
+        "Eluru": [
+            "Lankalapalli",
+            "Harijanavada",
+            "Arundhatipeta",
+            "SC Colony",
+            "Arjavari Gudem",
+            "Yanadi Colony",
+            "Harijanawada",
+            "Ramanujapuram Colony",
+            "Kunkala"
+        ],
+        
+        "Guntur": [
+            "Swarnandhra Nagara",
+            "Harijanawada",
+            "Yanadi Colony",
+            "ST Colony"
+        ],
+        "Kakinada": [
+            "Buradakota",
+            "SC Colony",
+            "Bouruvaka",
+            "Fishermen Colony",
+            "Pothabathulavari Colony",
+            "ST colony"
+        ],
+        "Konaseema": [
+            
+        ],
+        "Krishna": [],
+        "Kurnool": [],
+        "Parvathipuram Manyam": [],
+        "Nandyal": [],
+        "NTR District": [],
+        "Palnadu": [],
+        "Prakasam": [],
+        "SPS Nellore": [],
+        "Srikakulam": [],
+        "Sri Satyasai": [],
+        "Tirupati": [],
+        "Vizianagaram": [],
+        "Visakhapatnam": [],
+        "West Godavari": [],
+        "YSR Kadapa": []
 
     };
 
@@ -87,7 +404,7 @@ $(document).ready(function() {
         $mandalSelect.empty();
         $mandalSelect.append($('<option>').val("").text("Choose..."));
 
-        $.each(mandals, function(index, mandal) {
+        $.each(mandals, function(_index, mandal) {
             $mandalSelect.append($('<option>').val(mandal).text(mandal));
         });
 
@@ -95,9 +412,56 @@ $(document).ready(function() {
         var $colonySelect = $('#Colony');
         $colonySelect.empty(); 
         $colonySelect.append($('<option>').val("").text("Select Colony"));
-        $.each(colonies, function(index, colony) {
+        $.each(colonies, function(_index, colony) {
             $colonySelect.append($('<option>').val(colony).text(colony));
     });
 });
-});
+document.getElementById('reportform').addEventListener('submit', async function(event) {
+    event.preventDefault(); 
+    var district = document.getElementById('District').value;
+    var mandal = document.getElementById('Mandal').value;
+    var colony = document.getElementById('Colony').value;
 
+    try {
+        const response = await fetch('/api/fetch_reports', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ district: district, mandal: mandal, colony: colony }),
+            
+        });
+        console.log({ district: district, mandal: mandal, colony: colony });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const reports = await response.json();
+
+        var tableBody = document.getElementById('reportsTable').getElementsByTagName('tbody')[0];
+        tableBody.innerHTML = ''; 
+
+        reports.forEach(report => {
+            var row = tableBody.insertRow();
+    row.insertCell(0).innerHTML = '<input type="checkbox" name="select" />';
+    row.insertCell(1).innerHTML = report.ApplicationCode || ''; 
+    row.insertCell(2).innerHTML = report.District || ''; 
+    row.insertCell(3).innerHTML = report.TempleName || '';
+    row.insertCell(4).innerHTML = report.Colony || '';
+    row.insertCell(5).innerHTML = report.Village || '';
+    row.insertCell(6).innerHTML = report.Mandal || '';
+    row.insertCell(7).innerHTML = report.Caste || '';
+    row.insertCell(8).innerHTML = report.PopulationOfTheVillage || '';
+    row.insertCell(9).innerHTML = report.LandTitle || '';
+    row.insertCell(10).innerHTML = report.VillageResponsiblePersonName || '';
+    row.insertCell(11).innerHTML = report.PhoneNumber || '';
+    row.insertCell(12).innerHTML = report.ExtentOfLandAvailableForThePurpose || '';
+    row.insertCell(13).innerHTML = report.ApplicationStatus || '';
+        });
+
+    } catch (error) {
+        console.error('Error fetching report data:', error);
+    }
+});
+});

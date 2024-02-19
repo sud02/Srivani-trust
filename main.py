@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Form, Request, File, UploadFile
+from fastapi import Body
 from pymongo import MongoClient
 from pydantic import BaseModel,ValidationError
 from fastapi.responses import HTMLResponse, RedirectResponse,JSONResponse
@@ -182,7 +183,19 @@ async def add_user(user: User):
     return {"message": "User created successfully."}
 
 
-
+@app.post("/api/fetch_reports")
+async def api_fetch_reports(request_body: dict = Body(...)):
+    district = request_body.get("district")
+    mandal = request_body.get("mandal")
+    colony = request_body.get("colony")
+    query = {"District": district}
+    if mandal:
+        query["Mandal"] = mandal
+    if colony:  
+        query["Colony"] = colony
+    reports = list(bhajana_mandir_forms_collection.find(query))
+    reports = [{k: v for k, v in report.items() if k != "_id"} for report in reports]
+    return reports
 
 if __name__ =="__main__":
     app.run()
