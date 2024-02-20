@@ -416,52 +416,6 @@ $(document).ready(function() {
             $colonySelect.append($('<option>').val(colony).text(colony));
     });
 });
-document.getElementById('reportform').addEventListener('submit', async function(event) {
-    event.preventDefault(); 
-    var district = document.getElementById('District').value;
-    var mandal = document.getElementById('Mandal').value;
-    var colony = document.getElementById('Colony').value;
 
-    try {
-        const response = await fetch('/api/fetch_reports', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ district: district, mandal: mandal, colony: colony }),
-            
-        });
-        console.log({ district: district, mandal: mandal, colony: colony });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const reports = await response.json();
-
-        var tableBody = document.getElementById('reportsTable').getElementsByTagName('tbody')[0];
-        tableBody.innerHTML = ''; 
-
-        reports.forEach(report => {
-            var row = tableBody.insertRow();
-    row.insertCell(0).innerHTML = '<input type="checkbox" name="select" />';
-    row.insertCell(1).innerHTML = report.ApplicationCode || ''; 
-    row.insertCell(2).innerHTML = report.District || ''; 
-    row.insertCell(3).innerHTML = report.TempleName || '';
-    row.insertCell(4).innerHTML = report.Colony || '';
-    row.insertCell(5).innerHTML = report.Village || '';
-    row.insertCell(6).innerHTML = report.Mandal || '';
-    row.insertCell(7).innerHTML = report.Caste || '';
-    row.insertCell(8).innerHTML = report.PopulationOfTheVillage || '';
-    row.insertCell(9).innerHTML = report.LandTitle || '';
-    row.insertCell(10).innerHTML = report.VillageResponsiblePersonName || '';
-    row.insertCell(11).innerHTML = report.PhoneNumber || '';
-    row.insertCell(12).innerHTML = report.ExtentOfLandAvailableForThePurpose || '';
-    row.insertCell(13).innerHTML = report.ApplicationStatus || '';
-        });
-
-    } catch (error) {
-        console.error('Error fetching report data:', error);
-    }
-});
 });

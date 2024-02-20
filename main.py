@@ -82,6 +82,12 @@ class User(BaseModel):
     password: str
     role: str
 
+class ReportFilter(BaseModel):
+    district: Optional[str] = None
+    mandal: Optional[str] = None
+    colony: Optional[str] = None
+
+
 # Hash a password
 def get_password_hash(password):
     return pwd_context.hash(password)
@@ -182,20 +188,17 @@ async def add_user(user: User):
     
     return {"message": "User created successfully."}
 
-
 @app.post("/api/fetch_reports")
-async def api_fetch_reports(request_body: dict = Body(...)):
-    district = request_body.get("district")
-    mandal = request_body.get("mandal")
-    colony = request_body.get("colony")
-    query = {"District": district}
-    if mandal:
-        query["Mandal"] = mandal
-    if colony:  
-        query["Colony"] = colony
-    reports = list(bhajana_mandir_forms_collection.find(query))
-    reports = [{k: v for k, v in report.items() if k != "_id"} for report in reports]
-    return reports
+async def api_fetch_reports(filter: ReportFilter = Body(...)):
+    query = {}
+    if filter.district:
+        query["District"] = filter.district
+    if filter.mandal:
+        query["Mandal"] = filter.mandal
+    if filter.colony:
+        query["Colony"]=filter.mandal
+    reports = list(bhajana_mandir_forms_collection.find(query, {'_id': 0}))
+    return jsonable_encoder(reports)
 
 if __name__ =="__main__":
     app.run()
