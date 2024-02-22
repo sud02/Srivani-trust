@@ -30,24 +30,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.html5.min.js"></script>
 
-    <div class="header">
-        <img src="/Static/images/TTD-Logo.png">
-        <a href="/Landingpage" id="home">Bhajanamandiram</a>
-  <a href="/Newtemple" id="new-temple-construction">New Temple Construction</a>
-  <a href="/users" id="users">Users</a>
-  <a href="/Reports" id="reports">Reports</a>
-  <a href="/" id="logout" class="logout-link">
-           <img src="/Static/images/Logout-image.png" alt="Log Out" />
-         </a>
-       </div>
+<div class="header">
+    <img src="/Static/images/TTD-Logo.png">
+    <a href="/Landingpage" id="linka" >Bhajanamandiram</a>
+    <a href="/Newtemple" id="linkb">New Temple Construction</a>
+    <a href="/users" id="linkc" >Users</a>
+    <a href="/Reports" id="linkd" >Reports</a>
+    <a href="/" id="logout" class="logout-link nav-link p-2">
+        <img src="/Static/images/Logout-image.png" alt="Log Out" />
+    </a>
+</div>
 <div class="header-below">
     <h2>Reports</h2>
 </div>
 
-<div class="container my-4">
+<div class="container my-6">
   <form id="reportform">
       <div class="form-row">
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-6">
               <label for="District">District</label>
               <select id="District" class="form-control">
                   <option selected>Choose...</option>
@@ -81,390 +81,12 @@
                       <option value="YSR Kadapa">YSR Kadapa</option>
               </select>
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-6">
               <label for="Mandal">Mandal</label>
               <select id="Mandal" class="form-control">
                 <option selected>Choose...</option>
               </select>
           </div>
-          <div class="form-group col-md-4">
-              <label for="Panchayat">Panchayat</label>
-              <select id="Panchayat" class="form-control">
-                  <option selected>Choose...</option>
-                  <option value="Panchayat">Panchayat</option>
-              </select>
-          </div>
-      </div>
-      <div class="form-row">
-          <div class="form-group col-md-4">
-              <label for="AssemblyConstituency">Assembly Constituency</label>
-              <select id="AssemblyConstituency" class="form-control">
-                  <option selected>Choose...</option>
-                  <option value="Tekkali">Tekkali</option> 
-                      
-                        <option value="Parvathipuram">Parvathipuram</option> 
-                      
-                        <option value="Rajam">Rajam</option> 
-                      
-                        <option value="Pathapatnam">Pathapatnam</option> 
-                      
-                        <option value="Bhimili">Bhimili</option> 
-                      
-                        <option value="Visakhapatnam South">Visakhapatnam South</option> 
-                      
-                        <option value="Pendurthi">Pendurthi</option> 
-                      
-                        <option value="Mummidivaram">Mummidivaram</option> 
-                      
-                        <option value="Rajahmundry City">Rajahmundry City</option> 
-                      
-                        <option value="Kovvur">Kovvur</option> 
-                      
-                        <option value="Palakollu">Palakollu</option> 
-                      
-                        <option value="Bhimavaram">Bhimavaram</option> 
-                      
-                        <option value="Tanuku">Tanuku</option> 
-                      
-                        <option value="Tadepalligudem">Tadepalligudem</option> 
-                      
-                        <option value="Gopalapuram">Gopalapuram</option> 
-                      
-                        <option value="Gudivada">Gudivada</option> 
-                      
-                        <option value="Repalle">Repalle</option> 
-                      
-                        <option value="Bapatla">Bapatla</option> 
-                      
-                        <option value="Prathipadu">Prathipadu</option> 
-                      
-                        <option value="Chilakaluripet">Chilakaluripet</option> 
-                      
-                        <option value="Narasaraopet">Narasaraopet</option> 
-                      
-                        <option value="Vinukonda">Vinukonda</option> 
-                      
-                        <option value="Darsi">Darsi</option> 
-                      
-                        <option value="Atmakur">Atmakur</option> 
-                      
-                        <option value="Nellore City">Nellore City</option> 
-                      
-                        <option value="Udayagiri">Udayagiri</option> 
-                      
-                        <option value="Kadapa">Kadapa</option> 
-                      
-                        <option value="Kodur">Kodur</option> 
-                      
-                        <option value="Pulivendla">Pulivendla</option> 
-                      
-                        <option value="Jammalamadugu">Jammalamadugu</option> 
-                      
-                        <option value="Singanamala">Singanamala</option> 
-                      
-                        <option value="Raptadu">Raptadu</option> 
-                      
-                        <option value="Madakasira">Madakasira</option> 
-                      
-                        <option value="Pileru">Pileru</option> 
-                      
-                        <option value="Palakonda">Palakonda</option> 
-                      
-                        <option value="Srungavarapukota">Srungavarapukota</option> 
-                      
-                        <option value="Kakinada Rural">Kakinada Rural</option> 
-                      
-                        <option value="Kakinada City">Kakinada City</option> 
-                      
-                        <option value="Rajahmundry Rural">Rajahmundry Rural</option> 
-                      
-                        <option value="Kaikalur">Kaikalur</option> 
-                      
-                        <option value="Machilipatnam">Machilipatnam</option> 
-                      
-                        <option value="Nandigama">Nandigama</option> 
-                      
-                        <option value="Pedakurapadu">Pedakurapadu</option> 
-                      
-                        <option value="Mangalagiri">Mangalagiri</option> 
-                      
-                        <option value="Sattenapalle">Sattenapalle</option> 
-                      
-                        <option value="Sullurpeta">Sullurpeta</option> 
-                      
-                        <option value="Badvel">Badvel</option> 
-                      
-                        <option value="Srisailam">Srisailam</option> 
-                      
-                        <option value="Rayadurg">Rayadurg</option> 
-                      
-                        <option value="Palamaner">Palamaner</option> 
-                      
-                        <option value="Srikakulam">Srikakulam</option> 
-                      
-                        <option value="Amadalavalasa">Amadalavalasa</option> 
-                      
-                        <option value="Cheepurupalli">Cheepurupalli</option> 
-                      
-                        <option value="Chodavaram">Chodavaram</option> 
-                      
-                        <option value="Paderu">Paderu</option> 
-                      
-                        <option value="Anakapalle">Anakapalle</option> 
-                      
-                        <option value="Narsipatnam">Narsipatnam</option> 
-                      
-                        <option value="Prathipadu">Prathipadu</option> 
-                      
-                        <option value="Peddapuram">Peddapuram</option> 
-                      
-                        <option value="Gannavaram">Gannavaram</option> 
-                      
-                        <option value="Rampachodavaram">Rampachodavaram</option> 
-                      
-                        <option value="Nidadavole">Nidadavole</option> 
-                      
-                        <option value="Eluru">Eluru</option> 
-                      
-                        <option value="Nuzvid">Nuzvid</option> 
-                      
-                        <option value="Vijayawada East">Vijayawada East</option> 
-                      
-                        <option value="Tadikonda">Tadikonda</option> 
-                      
-                        <option value="Ponnuru">Ponnuru</option> 
-                      
-                        <option value="Chirala">Chirala</option> 
-                      
-                        <option value="Santhanuthalapadu">Santhanuthalapadu</option> 
-                      
-                        <option value="Kondapi">Kondapi</option> 
-                      
-                        <option value="Kovur">Kovur</option> 
-                      
-                        <option value="Nellore Rural">Nellore Rural</option> 
-                      
-                        <option value="Pattikonda">Pattikonda</option> 
-                      
-                        <option value="Yemmiganur">Yemmiganur</option> 
-                      
-                        <option value="Sathyavedu">Sathyavedu</option> 
-                      
-                        <option value="Bobbili">Bobbili</option> 
-                      
-                        <option value="Elamanchili">Elamanchili</option> 
-                      
-                        <option value="Tuni">Tuni</option> 
-                      
-                        <option value="Ramachandrapuram">Ramachandrapuram</option> 
-                      
-                        <option value="Razole">Razole</option> 
-                      
-                        <option value="Narasapuram">Narasapuram</option> 
-                      
-                        <option value="Undi">Undi</option> 
-                      
-                        <option value="Unguturu">Unguturu</option> 
-                      
-                        <option value="Polavaram">Polavaram</option> 
-                      
-                        <option value="Vijayawada West">Vijayawada West</option> 
-                      
-                        <option value="Vijayawada Central">Vijayawada Central</option> 
-                      
-                        <option value="Addanki">Addanki</option> 
-                      
-                        <option value="Rayachoti">Rayachoti</option> 
-                      
-                        <option value="Mydukur">Mydukur</option> 
-                      
-                        <option value="Allagadda">Allagadda</option> 
-                      
-                        <option value="Kodumur">Kodumur</option> 
-                      
-                        <option value="Anantapur Urban">Anantapur Urban</option> 
-                      
-                        <option value="Puttaparthi">Puttaparthi</option> 
-                      
-                        <option value="Ichchapuram">Ichchapuram</option> 
-                      
-                        <option value="Salur">Salur</option> 
-                      
-                        <option value="Pamarru">Pamarru</option> 
-                      
-                        <option value="Penamaluru">Penamaluru</option> 
-                      
-                        <option value="Guntur East">Guntur East</option> 
-                      
-                        <option value="Ongole">Ongole</option> 
-                      
-                        <option value="Markapuram">Markapuram</option> 
-                      
-                        <option value="Alur">Alur</option> 
-                      
-                        <option value="Guntakal">Guntakal</option> 
-                      
-                        <option value="Penukonda">Penukonda</option> 
-                      
-                        <option value="Kadiri">Kadiri</option> 
-                      
-                        <option value="Thamballapalle">Thamballapalle</option> 
-                      
-                        <option value="Punganur">Punganur</option> 
-                      
-                        <option value="Palasa">Palasa</option> 
-                      
-                        <option value="Narasannapeta">Narasannapeta</option> 
-                      
-                        <option value="Etcherla">Etcherla</option> 
-                      
-                        <option value="Nellimarla">Nellimarla</option> 
-                      
-                        <option value="Vizianagaram">Vizianagaram</option> 
-                      
-                        <option value="Visakhapatnam North">Visakhapatnam North</option> 
-                      
-                        <option value="Madugula">Madugula</option> 
-                      
-                        <option value="Pithapuram">Pithapuram</option> 
-                      
-                        <option value="Amalapuram">Amalapuram</option> 
-                      
-                        <option value="Mandapeta">Mandapeta</option> 
-                      
-                        <option value="Jaggampeta">Jaggampeta</option> 
-                      
-                        <option value="Tiruvuru">Tiruvuru</option> 
-                      
-                        <option value="Guntur West">Guntur West</option> 
-                      
-                        <option value="Kanigiri">Kanigiri</option> 
-                      
-                        <option value="Kavali">Kavali</option> 
-                      
-                        <option value="Sarvepalli">Sarvepalli</option> 
-                      
-                        <option value="Venkatagiri">Venkatagiri</option> 
-                      
-                        <option value="Proddatur">Proddatur</option> 
-                      
-                        <option value="Panyam">Panyam</option> 
-                      
-                        <option value="Adoni">Adoni</option> 
-                      
-                        <option value="Hindupur">Hindupur</option> 
-                      
-                        <option value="Madanapalle">Madanapalle</option> 
-                      
-                        <option value="Tirupati">Tirupati</option> 
-                      
-                        <option value="Kuppam">Kuppam</option> 
-                      
-                        <option value="Kurupam">Kurupam</option> 
-                      
-                        <option value="Gajapathinagaram">Gajapathinagaram</option> 
-                      
-                        <option value="Gajuwaka">Gajuwaka</option> 
-                      
-                        <option value="Anaparthy">Anaparthy</option> 
-                      
-                        <option value="Rajanagaram">Rajanagaram</option> 
-                      
-                        <option value="Achanta">Achanta</option> 
-                      
-                        <option value="Chintalapudi">Chintalapudi</option> 
-                      
-                        <option value="Gannavaram">Gannavaram</option> 
-                      
-                        <option value="Mylavaram">Mylavaram</option> 
-                      
-                        <option value="Jaggayyapeta">Jaggayyapeta</option> 
-                      
-                        <option value="Gurajala">Gurajala</option> 
-                      
-                        <option value="Parchur">Parchur</option> 
-                      
-                        <option value="Kandukur">Kandukur</option> 
-                      
-                        <option value="Gudur">Gudur</option> 
-                      
-                        <option value="Kurnool">Kurnool</option> 
-                      
-                        <option value="Dhone">Dhone</option> 
-                      
-                        <option value="Mantralayam">Mantralayam</option> 
-                      
-                        <option value="Uravakonda">Uravakonda</option> 
-                      
-                        <option value="Kalyandurg">Kalyandurg</option> 
-                      
-                        <option value="Dharmavaram">Dharmavaram</option> 
-                      
-                        <option value="Chandragiri">Chandragiri</option> 
-                      
-                        <option value="Srikalahasti">Srikalahasti</option> 
-                      
-                        <option value="Nagari">Nagari</option> 
-                      
-                        <option value="Gangadhara Nellore">Gangadhara Nellore</option> 
-                      
-                        <option value="Visakhapatnam East">Visakhapatnam East</option> 
-                      
-                        <option value="Visakhapatnam West">Visakhapatnam West</option> 
-                      
-                        <option value="Araku Valley">Araku Valley</option> 
-                      
-                        <option value="Payakaraopet">Payakaraopet</option> 
-                      
-                        <option value="Kothapeta">Kothapeta</option> 
-                      
-                        <option value="Denduluru">Denduluru</option> 
-                      
-                        <option value="Pedana">Pedana</option> 
-                      
-                        <option value="Avanigadda">Avanigadda</option> 
-                      
-                        <option value="Vemuru">Vemuru</option> 
-                      
-                        <option value="Tenali">Tenali</option> 
-                      
-                        <option value="Macherla">Macherla</option> 
-                      
-                        <option value="Yerragondapalem">Yerragondapalem</option> 
-                      
-                        <option value="Giddalur">Giddalur</option> 
-                      
-                        <option value="Rajampet">Rajampet</option> 
-                      
-                        <option value="Kamalapuram">Kamalapuram</option> 
-                      
-                        <option value="Nandikotkur">Nandikotkur</option> 
-                      
-                        <option value="Nandyal">Nandyal</option> 
-                      
-                        <option value="Banaganapalle">Banaganapalle</option> 
-                      
-                        <option value="Tadipatri">Tadipatri</option> 
-                      
-                        <option value="Chittoor">Chittoor</option> 
-                      
-                        <option value="Puthalapattu">Puthalapattu</option> 
-                      
-                    </select>
-          </div>
-          <div class="form-group col-md-4">
-              <label for="Colony">Colony</label>
-              <select class="form-control" id="Colony">
-                <option value="">Select Colony</option>
-            </select>   
-          </div>
-          <div class="form-group col-md-4">
-            <label for="Ward">Ward</label>
-            <select id="Ward" class="form-control">
-                <option selected>Choose...</option>
-                <option value="Panchayat">Ward</option>
-            </select>
-        </div>
       </div>
       <div class="buttons">
         <button type="submit">Submit</button>
@@ -556,6 +178,30 @@
     });
 });
 </script>
-   
+<script>
+
+    $(document).ready(async function () {
+        $("#linka, #linkb, #linkc, #linkd, #logout").hide();
+        var role = getCookie("role");        
+
+        if (role === undefined) {
+            window.location.href = "/";
+        }
+        if (role === "admin") {
+            $("#linka, #linkb, #linkc, #linkd, #logout").show();
+        } else if (role === "editor") {
+            $("#linkc, #linkd, #logout").show();
+        } else if (role === "user") {
+            $("#linka, #linkb, #logout").show();
+        } else if (role === "agency") {
+            $("#linkd, #logout").show();
+        }
+    function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+}
+    });
+</script>
 </body>
 </html>

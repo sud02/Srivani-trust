@@ -14,8 +14,6 @@ import os
 import json
 from fastapi.middleware.cors import CORSMiddleware
 
-
-
 app = FastAPI()
 
 app.add_middleware(
@@ -137,9 +135,13 @@ async def login(request: Request, username: str = Form(...), password: str = For
     if not existing_user:
         raise HTTPException(status_code=404, detail="User not found")
     if verify_password(password, existing_user['password']):
-        return templates.TemplateResponse("Landingpage.html", {"request": request, "username": username})
+        role = existing_user['role']
+        response = templates.TemplateResponse("Landingpage.html", {"request": request, "username": username})
+        response.set_cookie(key="role", value=role)
+        return response
     else:
         raise HTTPException(status_code=400, detail="Incorrect password")
+
     
 @app.post("/submit_bhajana_mandir_form", response_class=HTMLResponse)
 async def submit_bhajana_mandir_form(

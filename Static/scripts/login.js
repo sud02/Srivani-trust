@@ -24,9 +24,7 @@ async function Signin() {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
-            if (response.status === 200) {
-                window.location.href = "/Landingpage";
-            } else {
+            if (response.status!= 200) {
                 alert("Login failed: " + response.statusText);
             }
         } catch (error) {
@@ -49,11 +47,10 @@ function generateCaptcha() {
         var char = chars.charAt(Math.floor(Math.random() * chars.length));
         captchaText += char;
 
-        // Adjusted font size for smaller canvas
-        ctx.font = "16px Arial"; // Smaller font size
+        ctx.font = "16px Arial"; 
         ctx.fillStyle = "rgb(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ")";
         ctx.textAlign = "center";
-        ctx.fillText(char, 10 + i * 20, canvas.height / 2 + 5); // Adjust positioning if necessary
+        ctx.fillText(char, 10 + i * 20, canvas.height / 2 + 5); 
     }
     sessionStorage.setItem("captchaCode", captchaText);
 }

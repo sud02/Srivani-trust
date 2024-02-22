@@ -407,7 +407,6 @@ $(document).ready(function() {
         $.each(mandals, function(_index, mandal) {
             $mandalSelect.append($('<option>').val(mandal).text(mandal));
         });
-
         var colonies = districtToColonies[selectedDistrict] || [];
         var $colonySelect = $('#Colony');
         $colonySelect.empty(); 
@@ -416,6 +415,4 @@ $(document).ready(function() {
             $colonySelect.append($('<option>').val(colony).text(colony));
     });
 });
-
-
 });

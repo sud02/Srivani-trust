@@ -275,6 +275,11 @@ body, html {
     overflow-x: auto; 
 }
 
+#linka, #linkb, #linkc, #linkd, #logout {
+    display: none;
+}
+
+
 
 
 

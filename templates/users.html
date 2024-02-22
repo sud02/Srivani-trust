@@ -16,14 +16,14 @@
 <body>
   <div class="header">
     <img src="/Static/images/TTD-Logo.png">
-    <a href="/Landingpage" id="home">Bhajanamandiram</a>
-    <a href="/Newtemple" id="new-temple-construction">New Temple Construction</a>
-    <a href="/users" id="users">Users</a>
-    <a href="/Reports" id="reports">Reports</a>
-    <a href="/" id="logout" class="logout-link">
-       <img src="/Static/images/Logout-image.png" alt="Log Out" />
-     </a>
-   </div>
+    <a href="/Landingpage" id="linka" >Bhajanamandiram</a>
+    <a href="/Newtemple" id="linkb">New Temple Construction</a>
+    <a href="/users" id="linkc" >Users</a>
+    <a href="/Reports" id="linkd" >Reports</a>
+    <a href="/" id="logout" class="logout-link nav-link p-2">
+        <img src="/Static/images/Logout-image.png" alt="Log Out" />
+    </a>
+</div>
   <div id="maindiv" class="container-fluid">
     <h2 class="pageheader" style="text-align: center; color: #a3000e; padding-top: 30px;padding-bottom: 20px; font-weight: 700;">Users</h2>
     <div class="row">
@@ -105,6 +105,30 @@
     </div>
   </div>
   <script src="/Static/scripts/users.js"></script>
-    
+  <script>
+
+    $(document).ready(async function () {
+        $("#linka, #linkb, #linkc, #linkd, #logout").hide();
+        var role = getCookie("role");        
+
+        if (role === undefined) {
+            window.location.href = "/";
+        }
+        if (role === "admin") {
+            $("#linka, #linkb, #linkc, #linkd, #logout").show();
+        } else if (role === "editor") {
+            $("#linkc, #linkd, #logout").show();
+        } else if (role === "user") {
+            $("#linka, #linkb, #logout").show();
+        } else if (role === "agency") {
+            $("#linkd, #logout").show();
+        }
+                function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+}
+    });
+</script>
 </body>
 </html>
