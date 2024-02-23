@@ -17,24 +17,41 @@ async function Signin() {
         payload.append('password', password);
 
         try {
-            const response = await axios({
+            const loginResponse = await axios({
                 method: 'post',
                 url: '/login',
                 data: payload,
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
-            if (response.status!= 200) {
-                alert("Login failed: " + response.statusText);
+            if (loginResponse.status === 200) {
+                const roleResponse = await axios.get('/get_user_role');
+                const role = roleResponse.data.role;
+                switch(role) {
+                    case 'admin':
+                        window.location.href = "/Landingpage";
+                        break;
+                    case 'editor':
+                        window.location.href = "/users";
+                        break;
+                    case 'agency':
+                        window.location.href = "/Reports";
+                        break;
+                    default:
+                        window.location.href = "/Landingpage";
+                }
+            } else {
+                alert("Login failed");
             }
         } catch (error) {
-            console.error("Error:", error.response.data.message);
-            alert("Login failed: " + error.response.data.message);
+            alert("Login failed: " + error.message);
         }
     } else {
         alert("Please enter all the details including captcha!");
     }
 }
+
+
 
 function generateCaptcha() {
     var canvas = $("#captcha")[0];

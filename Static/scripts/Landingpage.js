@@ -1,3 +1,4 @@
+
 function clearFields() {
     var inputElements = document.getElementsByTagName("input");
     for (var i = 0; i < inputElements.length; i++) {
@@ -56,5 +57,4 @@ try {
 }
 }
 document.getElementById('bhajanaMandirForm').addEventListener('submit', submitForm);
-
 

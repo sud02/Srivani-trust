@@ -14,6 +14,7 @@ import os
 import json
 from fastapi.middleware.cors import CORSMiddleware
 
+
 app = FastAPI()
 
 app.add_middleware(
@@ -141,6 +142,11 @@ async def login(request: Request, username: str = Form(...), password: str = For
         return response
     else:
         raise HTTPException(status_code=400, detail="Incorrect password")
+    
+@app.get("/get_user_role")
+async def get_user_role(request: Request):
+    role = request.cookies.get("role", "guest")
+    return JSONResponse(content={"role": role})
 
     
 @app.post("/submit_bhajana_mandir_form", response_class=HTMLResponse)
