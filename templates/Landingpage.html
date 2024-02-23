@@ -618,7 +618,7 @@
     } else if (role === "agency" && window.location.pathname !== "/Reports") {
         window.location.href = "/Reports";
     }
-                function getCookie(name) {
+    function getCookie(name) {
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
     if (parts.length === 2) return parts.pop().split(";").shift();
@@ -629,7 +629,7 @@
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         var yyyy = today.getFullYear();
-        today = mm + '/' + dd + '/' + yyyy;
+        today = dd + '/' + mm + '/' + yyyy;
         document.getElementById('current-date').textContent = today;
     });
 </script>

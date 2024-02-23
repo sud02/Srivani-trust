@@ -36,7 +36,7 @@
             <div class="col-md-4">
               <div class="info-box">
                 <span class="info-title">Request Date:</span>
-                <span class="info-content">1/2/2024</span>
+                <span class="info-content" id="current-date">1/2/2024</span>
               </div>
             </div>
             <div class="col-md-4">
@@ -656,9 +656,7 @@ $(document).ready(function () {
     }
 
     var role = getCookie("role");
-    console.log("Role:", role); 
     $("#linka, #linkb, #linkc, #linkd, #logout").hide();
-
     if (!role) {
         window.location.href = "/";
     } else if (role === "admin") {
@@ -676,7 +674,16 @@ $(document).ready(function () {
     } else if (role === "agency") {
         window.location.href = "/Reports";
     }
+    
 });
+document.addEventListener('DOMContentLoaded', function() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = dd + '/' + mm + '/' + yyyy;
+        document.getElementById('current-date').textContent = today;
+    });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
