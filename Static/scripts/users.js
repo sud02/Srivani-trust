@@ -15,7 +15,7 @@ $(document).ready(function() {
 function addUser() {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
+    const phone_number = document.getElementById('phone').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm_password').value;
     const role = document.getElementById('role').value;
@@ -27,7 +27,7 @@ function addUser() {
     const userData = {
         username: username,
         email: email,
-        phone: phone,
+        phone_number: phone,
         password: password,
         role: role
     };

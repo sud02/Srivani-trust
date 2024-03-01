@@ -142,13 +142,12 @@ async def login(request: Request, username: str = Form(...), password: str = For
         return response
     else:
         raise HTTPException(status_code=400, detail="Incorrect password")
-    
+
 @app.get("/get_user_role")
 async def get_user_role(request: Request):
     role = request.cookies.get("role", "guest")
     return JSONResponse(content={"role": role})
-
-    
+   
 @app.post("/submit_bhajana_mandir_form", response_class=HTMLResponse)
 async def submit_bhajana_mandir_form(
     form_data: str = Form(...),
@@ -176,8 +175,6 @@ async def submit_bhajana_mandir_form(
     insert_result = bhajana_mandir_forms_collection.insert_one(form_dict)
 
     return RedirectResponse(url="/Landingpage", status_code=303)
-
-
 @app.get("/api/users", response_model=List[dict])
 async def get_users():
     users = list(users_collection.find({}, {'_id': 0, 'password': 0})) 
@@ -188,14 +185,11 @@ async def add_user(user: User):
         raise HTTPException(
             status_code= status.HTTP_400_BAD_REQUEST, detail="Username already exists"
         )
-    
     hashed_password = pwd_context.hash(user.password)
     user.password = hashed_password
     
     users_collection.insert_one(user.dict())
-    
     return {"message": "User created successfully."}
-
 @app.post("/api/fetch_reports")
 async def api_fetch_reports(filter: ReportFilter = Body(...)):
     query = {}
@@ -203,10 +197,7 @@ async def api_fetch_reports(filter: ReportFilter = Body(...)):
         query["District"] = filter.district
     if filter.mandal:
         query["Mandal"] = filter.mandal
-    if filter.colony:
-        query["Colony"]=filter.mandal
     reports = list(bhajana_mandir_forms_collection.find(query, {'_id': 0}))
     return jsonable_encoder(reports)
-
 if __name__ =="__main__":
     app.run()

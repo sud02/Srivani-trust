@@ -80,22 +80,19 @@ body, html {
     font-size: 18px;
     width: calc(100% - 20px);
 }
-
-/* Adjust the captcha canvas styling */
 .captcha {
     display: flex;
-    align-items: center; /* Vertically center align items in the container */
-    justify-content: center; /* Horizontally center the container */
-    flex-direction: column; /* Stack the label and container */
-    margin-bottom: 10px; /* Add some margin to the bottom */
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    margin-bottom: 10px; 
 }
 
 .captcha-container {
     display: flex;
-    align-items: center; /* Align items vertically in the middle */
-    gap: 10px; /* Space between the canvas, input, and button */
+    align-items: center; 
+    gap: 10px; 
 }
-
 .captcha canvas {
     border: 2px solid #fbcd5d;
     border-radius: 20px;
