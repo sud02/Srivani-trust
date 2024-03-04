@@ -149,9 +149,10 @@
             { "data": "ApplicationStatus" }
         ]
     });
-    $('#District, #Mandal').on('change', function () {
-        table.ajax.reload();
-    });
+    $('#reportform').on('submit', function (e) {
+    e.preventDefault();
+    table.ajax.reload();
+});
 });
 </script>
 <script>

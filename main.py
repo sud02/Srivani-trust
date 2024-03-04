@@ -25,7 +25,7 @@ app.add_middleware(
 )
 
 # MongoDB setup
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://sud:123@srivani.cwr6x7o.mongodb.net/")
 db = client['loginusers']
 users_collection = db['users']
 bhajana_mandir_forms_collection = db['bhajana_mandir_forms']

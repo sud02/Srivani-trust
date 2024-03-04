@@ -280,6 +280,7 @@ $(document).ready(function() {
             $mandalSelect.append($('<option>').val(mandal).text(mandal));
         });
 });
+
 });
 
 
