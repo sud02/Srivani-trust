@@ -146,7 +146,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
 async def get_user_role(request: Request):
     role = request.cookies.get("role", "guest")
     return JSONResponse(content={"role": role})
-   
+
 @app.post("/submit_bhajana_mandir_form", response_class=HTMLResponse)
 async def submit_bhajana_mandir_form(
     form_data: str = Form(...),
@@ -162,7 +162,6 @@ async def submit_bhajana_mandir_form(
     
     UPLOAD_DIRECTORY = "/Users/sud/Desktop/Project/Requested_doc"
     os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
-    
     if documents_requestee:
         file_path = os.path.join(UPLOAD_DIRECTORY, documents_requestee.filename)
         async with aiofiles.open(file_path, 'wb') as out_file:
@@ -198,5 +197,6 @@ async def api_fetch_reports(filter: ReportFilter = Body(...)):
         query["Mandal"] = filter.mandal
     reports = list(bhajana_mandir_forms_collection.find(query, {'_id': 0}))
     return jsonable_encoder(reports)
+
 if __name__ =="__main__":
     app.run()
