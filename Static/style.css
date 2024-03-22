@@ -1,11 +1,9 @@
-/* Base Styles */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
 }
-
 /* Header Styles */
 .header {
     background-color: #a3000e;
@@ -18,11 +16,9 @@ body, html {
     width: 100%;
     margin-top: 0;
 }
-
 .header img {
     width: 70px;
 }
-
 .header a {
     color: #fbcd5d;
     text-decoration: none;
@@ -30,46 +26,36 @@ body, html {
     margin: 0 10px;
     display: inline-block;
 }
-
 .header a:hover, .header a.active {
     color: white;
 }
-
 .header a.active {
     border: 2px solid white;
     background-color: white;
     color: #8B0000;
 }
-
 .header::after {
     content: "";
     display: table;
     clear: both;
 }
-
 .header-below {
     text-align: center;
     padding-top: 20px;
     color: #8B0000;
 }
-
 .header-below h2, .header h3 {
     font-weight: 600;
 }
-
 .logout-link {
     float: right;
     padding: 10px 20px;
 }
-
 .logout-link img {
     width: 20px;
     height: 20px;
     vertical-align: middle;
 }
-
-
-
 /* Form and Input Styles */
 .form-control, .custom-select, .user-box input, .captcha input {
     border: 2px solid #fbcd5d;
@@ -104,7 +90,6 @@ body, html {
     outline: none;
     font-size: 16px; 
 }
-
 #refresh-captcha {
     padding: 5px 10px; 
     font-size: 10px; 
@@ -114,19 +99,14 @@ body, html {
     border: none;
     border-radius: 20px; 
 }
-
 /* Additional styles for focus and hover states */
 #captcha-input:focus, #refresh-captcha:hover {
     border-color: #fbcd5d;
 }
-
-
-
 ::placeholder {
     color: #a3000e;
     opacity: 1;
 }
-
 .custom-select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -136,20 +116,16 @@ body, html {
     background-position: right 10px top 50%;
     background-size: 24px;
 }
-
 .custom-select:focus {
     border-color: #fbcd5d;
 }
-
 .custom-select option, .dropdown-menu .btn {
     padding: 10px;
 }
-
 .dropdown-menu .btn:hover, .dropdown-menu .btn:focus {
     background-color: #a3000e;
     color: white;
 }
-
 /* Button Styles */
 .buttons button, .signup-buttons button {
     color: white;
@@ -163,7 +139,6 @@ body, html {
     margin: 0 5px;
     width: 200px;
 }
-
 .buttons button:hover, .signup-buttons button:hover {
     opacity: 0.8;
 }
@@ -173,8 +148,6 @@ body, html {
     justify-content: center; 
     gap: 10px; 
 }
-
-
 /* Additional Styles for Specific Layouts */
 .background {
     background-image: url('/images/tirumala_background.jpg');
@@ -183,7 +156,6 @@ body, html {
     height: 100vh;
     position: relative;
 }
-
 .login-box, .signup-box {
     display: flex;
     align-items: center;
@@ -200,33 +172,27 @@ body, html {
     -ms-user-select: none;
     user-select: none;
 }
-
 .login-box-content, .signup-box-content, .login-box form, .signup-box form {
     flex: 2;
 }
-
 .login-box h2, .signup-box h2 {
     margin: 0 0 20px;
     padding: 0;
     color: #a3000e;
     text-align: center;
 }
-
 .user-box, .input-group, .captcha {
     margin-bottom: 10px;
 }
-
 .user-box label, .input-group label, .captcha label {
     display: block;
     color: #333;
 }
-
 .sign-up-link, .captcha-display {
     color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
-
 .captcha-display {
     font-size: 18px;
     color: #555555;
@@ -237,24 +203,20 @@ body, html {
     border-radius: 4px;
     margin-bottom: 10px;
 }
-
 .input-row {
     display: flex;
     justify-content: space-between;
 }
-
 .input-group {
     flex: 1;
     margin: 0 10px;
 }
-
 .border-container {
     border: 1px solid #dbdbdb;
     border-radius: 5px;
     width: 1000px; 
     margin: auto; 
 }
-
 .background {
     background-image: url('/Static/images/tirumala_background.jpg'); 
     background-size: cover;
@@ -262,8 +224,6 @@ body, html {
     height: 100vh; 
     position: relative;
 }
-
-
 #reportsTable td, #reportsTable th {
     padding: 0.5rem;
     font-size: 0.8rem;
@@ -271,133 +231,65 @@ body, html {
 .card-body {
     overflow-x: auto; 
 }
-
 #linka, #linkb, #linkc, #linkd, #logout {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .header {
-        padding: 5px 0;
-    }
+@media screen and (max-width: 768px) {
     .header img {
         width: 50px;
     }
+
     .header a {
-        font-size: 12px;
-        padding: 5px;
-    }
-    .logout-link img {
-        width: 15px;
-        height: auto;
-    }
-    .header a:not(.logout-link) {
-        display: none;
-    }
-    .header-below h2 {
-        font-size: 18px;
-        margin-top: 10px;
-        padding: 0 5px;
-    }
-    .form-control, .custom-select {
+        padding: 5px 10px;
         font-size: 14px;
     }
-    .buttons button {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .border-container {
-        width: auto;
-        margin: 10px;
-        padding: 10px;
-    }
-}
 
-@media (max-width: 576px) {
-    .header a, .logout-link img {
-        font-size: 10px;
-        padding: 2px;
+    .logout-link {
+        padding: 5px 10px;
     }
-    .header-below h2 {
+
+    .logout-link img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .form-control, .custom-select, .user-box input, .captcha input {
+        padding: 8px;
         font-size: 16px;
     }
-    #myTable thead th, #myTable tbody td {
-        padding: 5px;
-        font-size: 10px;
+
+    .buttons button, .signup-buttons button {
+        padding: 8px 15px;
+        margin: 0 2px;
+        width: auto;
+    }
+
+    .login-box, .signup-box {
+        padding: 15px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .background {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .border-container {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-group {
+        margin: 0 0 10px 0;
+    }
+
+    #reportsTable td, #reportsTable th {
+        font-size: 0.7rem;
     }
 }
-
-html, body, .container, .container-fluid {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-#myTable_wrapper {
-    overflow-x: auto;
-}
-
-.header {
-    padding: 5px;
-}
-
-.header img {
-    width: 40px;
-}
-
-.header a, .logout-link img {
-    font-size: 12px;
-    padding: 5px;
-}
-
-.header-below {
-    padding: 10px 5px;
-}
-
-.header-below h2 {
-    font-size: 18px;
-}
-
-.form-control, .custom-select {
-    font-size: 14px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.buttons button {
-    width: 100%;
-    font-size: 14px;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-#myTable thead th, #myTable tbody td {
-    padding: 8px;
-    font-size: 12px;
-}
-
-.dt-buttons {
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.dt-button {
-    width: 100%;
-    margin: 2px 0;
-}
-
-.header a, .logout-link img {
-    font-size: 10px;
-}
-
-.header-below h2 {
-    font-size: 16px;
-}
-
-#myTable thead th, #myTable tbody td {
-    padding: 5px;
-    font-size: 10px;
-}
-
-
-
-

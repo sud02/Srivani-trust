@@ -118,16 +118,16 @@ async def users_page(request: Request):
 async def reports_page(request: Request):
     return templates.TemplateResponse("Reports.html", {"request": request})
 
-@app.post("/signup", response_class=HTMLResponse)
+@app.post("/signup")
 async def signup(user: UserIn):
     existing_user = users_collection.find_one({"username": user.username})
     if existing_user:
-        raise HTTPException(status_code=400, detail="Username already registered")
-    hashed_password = get_password_hash(user.password)
+        return JSONResponse(status_code=400, content={"message": "Username already exists"})
+    hashed_password = pwd_context.hash(user.password)
     user_dict = user.dict()
     user_dict['password'] = hashed_password
     users_collection.insert_one(user_dict)
-    return RedirectResponse(url="/", status_code=303)
+    return JSONResponse(status_code=201, content={"message": "User created successfully"})
 
 @app.post("/login", response_class=HTMLResponse)
 async def login(request: Request, username: str = Form(...), password: str = Form(...)):
