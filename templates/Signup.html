@@ -71,7 +71,7 @@
             const formObject = Object.fromEntries(formData.entries());
         
             try {
-                const response = await fetch("/signup", { // Adjust this if your FastAPI app is hosted
+                const response = await fetch("/signup", { 
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json',
@@ -83,7 +83,7 @@
                     const result = await response.json();
                     swal("Success", result.message, "success")
                     .then(() => {
-                        window.location.href = '/'; // Or to any other page you want to redirect
+                        window.location.href = '/';
                     });
                 } else {
                     const error = await response.json();
