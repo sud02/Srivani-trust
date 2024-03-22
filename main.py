@@ -76,9 +76,10 @@ class BhajanaMandirForm(BaseModel):
 class User(BaseModel):
     username: str
     email: str
-    phone: str
+    phone_number: str  
     password: str
     role: str
+
 
 class ReportFilter(BaseModel):
     district: Optional[str] = None
@@ -181,13 +182,15 @@ async def get_users():
 async def add_user(user: User):
     if users_collection.find_one({"username": user.username}):
         raise HTTPException(
-            status_code= status.HTTP_400_BAD_REQUEST, detail="Username already exists"
+            status_code=400, detail="Username already exists"
         )
     hashed_password = pwd_context.hash(user.password)
-    user.password = hashed_password
+    user_dict = user.dict()
+    user_dict['password'] = hashed_password
     
-    users_collection.insert_one(user.dict())
+    users_collection.insert_one(user_dict)
     return {"message": "User created successfully."}
+
 @app.post("/api/fetch_reports")
 async def api_fetch_reports(filter: ReportFilter = Body(...)):
     query = {}
